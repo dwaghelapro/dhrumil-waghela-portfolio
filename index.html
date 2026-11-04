@@ -1,0 +1,2132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<script>
+(function(){
+  // Blank-first gate: only when the creation scripts can actually run
+  // and motion is allowed does the page start blank. If this script
+  // itself cannot run, no class is added and everything shows
+  // normally. If the main creation script does not take over within
+  // 5 seconds, this failsafe removes the blank state on its own.
+  try {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    document.documentElement.classList.add('build-blank');
+    window.__buildBlankFailsafe = setTimeout(function(){
+      document.documentElement.classList.remove('build-blank');
+    }, 5000);
+  } catch (e) {}
+})();
+</script>
+<link rel="icon" href="data:," />
+<title>Dhrumil Waghela: Product Manager &amp; Business Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Fonts load asynchronously: the page paints immediately in local fallback
+     type and swaps the webfonts in when they arrive. A stalled font request
+     must never be able to hold the whole page on a blank screen. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root{
+    --bg:#08090b;
+    --bg2:#0e1013;
+    --panel:#101216;
+    --panel2:#171a20;
+    --line:#22252c;
+    --line2:#3a3f49;
+    --text:#f5f7fa;
+    --muted:#bcc4d0;
+    --muted2:#9aa5b5;
+    --accent:#6d5df0;
+    --accent-ink:#ffffff;
+    --accent-text:#b7aaff;
+    --accent-hover:#7f6ff5;
+    --ok:#4cc07e;
+    --chip-bg:#221d3d;
+    --chip-line:#4a3f7d;
+    --chip-text:#cdc2ff;
+    --metric-bg:#14161c;
+    --nav-bg:rgba(8,9,11,.92);
+    --featured-bg:linear-gradient(135deg,#131318 0%,#0b0c0f 100%);
+    --contact-bg:linear-gradient(135deg,#12101d 0%,#0a0a0d 60%);
+    --ghost-bg:rgba(255,255,255,.03);
+    --ink2:#dde3eb;
+    --faint:#98a2b3;
+    --hot-line:rgba(167,139,250,.45);
+    --card-shadow:none;
+    --a-violet:#a78bfa;
+    --a-green:#4ade80;
+    --a-blue:#60a5fa;
+    --a-yellow:#facc15;
+    --a-pink:#f472b6;
+    --a-teal:#2dd4bf;
+    --a-orange:#fb923c;
+    --a-coral:#f87171;
+    --a-lime:#a3e635;
+    --a-cyan:#22d3ee;
+    --orb-a:radial-gradient(circle,rgba(139,124,246,.48) 0%,rgba(139,124,246,0) 68%);
+    --orb-b:radial-gradient(circle,rgba(96,165,250,.42) 0%,rgba(96,165,250,0) 68%);
+    --orb-c:radial-gradient(circle,rgba(74,222,128,.34) 0%,rgba(74,222,128,0) 68%);
+    --fx-line:rgba(167,139,250,.45);
+    --scan-glow:rgba(167,139,250,.16);
+    --scan-glow-strong:rgba(167,139,250,.30);
+    --scan-band-bg:rgba(167,139,250,.10);
+    --scan-line:rgba(167,139,250,.38);
+    --fx-dot:rgba(167,139,250,.35);
+    --float-shadow:0 24px 44px -20px rgba(0,0,0,.6);
+    --card-ellipse:rgba(0,0,0,.5);
+    --radius:14px;
+    color-scheme:light dark;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#f2f2f4;
+      --bg2:#e8e8ec;
+      --panel:#ffffff;
+      --panel2:#eeeef2;
+      --line:#d4d4dc;
+      --line2:#a2a2b0;
+      --text:#101116;
+      --muted:#3f4350;
+      --muted2:#4a4f5c;
+      --accent:#5b4bc4;
+      --accent-text:#4636a8;
+      --accent-hover:#6a58d8;
+      --ok:#2e7d4f;
+      --chip-bg:#eae7fb;
+      --chip-line:#bfb4ec;
+      --chip-text:#4636a8;
+      --metric-bg:#f4f4f8;
+      --nav-bg:rgba(242,242,244,.92);
+      --featured-bg:linear-gradient(135deg,#ffffff 0%,#efeaf9 100%);
+      --contact-bg:linear-gradient(135deg,#ece8fa 0%,#ffffff 60%);
+      --ghost-bg:rgba(16,17,22,.03);
+      --ink2:#23242c;
+      --faint:#454a57;
+      --hot-line:rgba(91,75,196,.5);
+      --card-shadow:0 1px 3px rgba(16,17,22,.08),0 12px 28px -18px rgba(16,17,22,.2);
+      --a-violet:#7c3aed;
+      --a-green:#16a34a;
+      --a-blue:#2563eb;
+      --a-yellow:#a16207;
+      --a-pink:#db2777;
+      --a-teal:#0f766e;
+      --a-orange:#ea580c;
+      --a-coral:#dc2626;
+      --a-lime:#65a30d;
+      --a-cyan:#0891b2;
+      --orb-a:radial-gradient(circle,rgba(124,58,237,.3) 0%,rgba(124,58,237,0) 68%);
+      --orb-b:radial-gradient(circle,rgba(37,99,235,.26) 0%,rgba(37,99,235,0) 68%);
+      --orb-c:radial-gradient(circle,rgba(22,163,74,.22) 0%,rgba(22,163,74,0) 68%);
+      --fx-line:rgba(91,75,196,.4);
+      --scan-glow:rgba(91,75,196,.13);
+      --scan-glow-strong:rgba(91,75,196,.24);
+      --scan-band-bg:rgba(91,75,196,.09);
+      --scan-line:rgba(91,75,196,.34);
+      --fx-dot:rgba(91,75,196,.3);
+      --float-shadow:0 22px 38px -18px rgba(23,34,46,.22);
+      --card-ellipse:rgba(23,34,46,.16);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--accent);color:var(--accent-ink)}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}
+  .mono{font-family:"JetBrains Mono",monospace}
+  .serif{font-family:"Source Serif 4",Georgia,"Times New Roman",serif}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 clamp(18px,4vw,32px)}
+  /* Grid/flex children must be allowed to shrink below their content size,
+     or one long word or label can force sideways overflow on small screens. */
+  .hero-grid>*,.work-grid>*,.steps>*,.cred-grid>*,.stats>*,.card,.metric{min-width:0}
+  img,svg{max-width:100%}
+
+  /* NAV */
+  .topnav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);background:var(--nav-bg);
+    border-bottom:1px solid var(--line);
+  }
+  .topnav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .nav-links{display:flex;gap:4px;flex-wrap:wrap}
+  .nav-links a{
+    text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.02em;
+    color:var(--muted);padding:8px 12px;border-radius:8px;border:1px solid transparent;
+  }
+  .nav-links a:hover{color:var(--text);border-color:var(--line2);background:var(--panel)}
+  .nav-cta{
+    text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.01em;
+    background:var(--accent);color:var(--accent-ink);padding:9px 16px;border-radius:10px;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--accent-hover)}
+  .avail{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--muted);white-space:nowrap}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(128,150,170,.18);flex:none}
+
+  /* HERO */
+  .hero{position:relative;padding:52px 0 4px}
+  .hero-name{
+    font-family:"Public Sans",system-ui,sans-serif;font-weight:800;
+    font-size:clamp(54px,8.6vw,94px);line-height:1.02;letter-spacing:-.025em;margin:0;
+  }
+  .hero-role{
+    font-size:clamp(17px,2.3vw,22px);line-height:1.4;color:var(--accent-text);font-weight:600;margin:12px 0 0;max-width:44ch;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;margin-top:28px;position:relative}
+  .hero-intro p{color:var(--muted);font-size:16.5px;line-height:1.7;margin:0;max-width:58ch}
+  .hero-intro p strong{color:var(--text)}
+  .role-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .role-tags span{
+    font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:999px;border:1px solid var(--line2);background:var(--panel);color:var(--text);
+  }
+  .hero-card{
+    background:var(--panel);border:1px solid var(--line2);border-radius:var(--radius);padding:22px;
+    align-self:start;box-shadow:var(--card-shadow);
+  }
+  .hero-card h3{margin:0 0 4px;font-family:"Public Sans",sans-serif;font-size:17px;font-weight:700}
+  .hero-card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.55}
+  .fact-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:0}
+  .fact-list li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--line);font-size:13.5px}
+  .fact-list li b{font-weight:700;text-align:right}
+  .fact-list li span{color:var(--muted);font-weight:600;font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding-top:2px}
+  /* Tag lists stack: label on top, values as pill chips that wrap evenly.
+     This chip format is the standard for every tag/list display on the
+     page (Focus, Core Craft and Domains here; the Focus line in the
+     contact meta below). Single values stay as plain right-aligned text. */
+  .fact-list li.fact-stack{flex-direction:column;align-items:flex-start;gap:9px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chips>span,.fact-list li .chips>span{
+    font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
+    color:var(--chip-text);background:var(--chip-bg);border:1px solid var(--chip-line);border-radius:999px;padding:5px 10px;
+  }
+
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:34px;position:relative;
+  }
+  .stat{background:var(--panel);padding:22px 20px}
+  .stat .num{font-family:"Public Sans",sans-serif;font-size:clamp(30px,3.6vw,40px);font-weight:800;line-height:1;letter-spacing:-.02em}
+  .stat .num i{font-style:normal;color:var(--accent-text)}
+  .stat .lbl{margin-top:8px;color:var(--muted);font-size:13px;line-height:1.45;font-weight:500}
+
+  /* HERO ANTI-GRAVITY: decorative floating layer, hero only. Everything
+     below the hero stays static and clean. Motion is transform-only,
+     driven by CSS drift animations plus --mx/--my (pointer) and --sy
+     (scroll) custom properties set from JS; all of it is switched off
+     under prefers-reduced-motion at the end of this stylesheet. */
+  .hero{overflow:hidden;overflow:clip}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-fx{
+    position:absolute;inset:-110px 0 -70px;z-index:0;pointer-events:none;overflow:hidden;
+    transform:translate3d(0,calc(var(--sy,0)*.14px),0);
+    animation:fxIn 1.4s ease .1s both;
+  }
+  @keyframes fxIn{from{opacity:0}to{opacity:1}}
+  .fx-layer{position:absolute;inset:0;will-change:transform}
+  .fx-d1{transform:translate3d(calc(var(--mx,0)*16px),calc(var(--my,0)*12px),0)}
+  .fx-d2{transform:translate3d(calc(var(--mx,0)*9px),calc(var(--my,0)*7px),0)}
+  .fx-d3{transform:translate3d(calc(var(--mx,0)*5px),calc(var(--my,0)*4px),0)}
+  .fx-orb{position:absolute;border-radius:50%;filter:blur(28px)}
+  .fx-orb-a{width:460px;height:460px;top:-150px;right:-70px;background:var(--orb-a);animation:driftA 34s ease-in-out infinite alternate}
+  .fx-orb-b{width:320px;height:320px;bottom:-120px;left:-90px;background:var(--orb-b);animation:driftB 28s ease-in-out infinite alternate}
+  .fx-orb-c{width:150px;height:150px;top:38%;left:44%;background:var(--orb-c);animation:driftA 22s ease-in-out infinite alternate-reverse}
+  @keyframes driftA{from{transform:translate(0,0)}to{transform:translate(-34px,26px)}}
+  @keyframes driftB{from{transform:translate(0,0)}to{transform:translate(30px,-24px)}}
+  .fx-dots{
+    position:absolute;top:6px;left:2%;width:360px;height:190px;opacity:.55;
+    background-image:radial-gradient(circle,var(--fx-dot) 1.2px,transparent 1.4px);
+    background-size:22px 22px;
+    -webkit-mask-image:radial-gradient(closest-side,#000 30%,transparent 100%);
+    mask-image:radial-gradient(closest-side,#000 30%,transparent 100%);
+    animation:driftB 30s ease-in-out infinite alternate;
+  }
+  .fx-ring{position:absolute;top:64px;right:12%;width:92px;height:92px;border-radius:50%;border:1.5px solid var(--fx-line);animation:ringFloat 16s ease-in-out infinite}
+  @keyframes ringFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(24deg)}}
+  .fx-plus{position:absolute;bottom:120px;right:6%;width:22px;height:22px;animation:plusFloat 12s ease-in-out infinite}
+  .fx-plus::before,.fx-plus::after{content:"";position:absolute;background:var(--fx-line);border-radius:2px}
+  .fx-plus::before{left:50%;top:0;width:2.5px;height:100%;transform:translateX(-50%)}
+  .fx-plus::after{top:50%;left:0;height:2.5px;width:100%;transform:translateY(-50%)}
+  @keyframes plusFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(90deg)}}
+  .fx-diamond{position:absolute;top:190px;left:3.5%;width:26px;height:26px;border:1.5px solid var(--fx-line);animation:diamondFloat 18s ease-in-out infinite}
+  @keyframes diamondFloat{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(-14px)}}
+  .fx-dot{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--fx-line);animation:dotFloat 9s ease-in-out infinite}
+  .fx-dot-1{top:118px;left:47%}
+  .fx-dot-2{bottom:110px;left:9%;animation-duration:11s;animation-delay:1.4s}
+  .fx-dot-3{top:290px;right:17%;animation-duration:10s;animation-delay:2.2s}
+  @keyframes dotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+
+  /* Levitating "At a Glance" card: an endless gentle bob with a
+     breathing ground shadow beneath it. No entrance animation: the
+     card is simply there, fully assembled, when the page loads. */
+  .hero .hero-card{position:relative;box-shadow:var(--float-shadow)}
+  .hero .hero-card{animation:heroFloat 9s ease-in-out infinite}
+  @keyframes heroFloat{
+    0%{transform:translateY(5px) rotate(0deg)}
+    30%{transform:translateY(-6px) rotate(-.3deg)}
+    55%{transform:translateY(-1px) rotate(.22deg)}
+    80%{transform:translateY(-8px) rotate(-.18deg)}
+    100%{transform:translateY(5px) rotate(0deg)}
+  }
+  .hero-card::after{
+    content:"";position:absolute;left:50%;bottom:-20px;width:72%;height:16px;border-radius:50%;
+    background:var(--card-ellipse);filter:blur(9px);z-index:-1;
+    animation:cardShadow 9s ease-in-out .12s infinite;
+  }
+  @keyframes cardShadow{
+    0%,100%{transform:translateX(-50%) scaleX(1);opacity:.85}
+    30%{transform:translateX(-50%) scaleX(.9);opacity:.6}
+    55%{transform:translateX(-50%) scaleX(.97);opacity:.8}
+    80%{transform:translateX(-50%) scaleX(.87);opacity:.55}
+  }
+
+  /* Role tags drift a few pixels each, staggered so they never move in sync. */
+  .hero .role-tags span{animation:tagFloat 6.5s ease-in-out infinite}
+  .hero .role-tags span:nth-child(2){animation-duration:7.4s;animation-delay:.6s}
+  .hero .role-tags span:nth-child(3){animation-duration:6s;animation-delay:1.1s}
+  .hero .role-tags span:nth-child(4){animation-duration:7.9s;animation-delay:.3s}
+  .hero .role-tags span:nth-child(5){animation-duration:6.8s;animation-delay:1.5s}
+  @keyframes tagFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+  /* Stats bar hovers above the page on the same soft shadow. */
+  .hero .stats{box-shadow:var(--float-shadow)}
+
+  /* CURSOR TRAIL: a full-viewport canvas the trail script draws on.
+     pointer-events:none means particles can never block a click, hover
+     or tap anywhere on the page; the layer is purely decorative. */
+  #cursor-trail{
+    position:fixed;inset:0;width:100%;height:100%;
+    pointer-events:none;z-index:9999;
+  }
+
+  /* SCANNING SWEEP: a soft translucent band and glow that follows
+     the pointer (mouse, pen or finger), echoing a wireframe scan.
+     Fixed and pointer-events:none, so it can never block a click,
+     tap, hover or scroll, and its colours and alpha stay subtle
+     enough never to obscure text. On touch it shrinks to a glow
+     sized to stay visible around the fingertip. Movement is
+     transform only, set from the trail script. */
+  #pointer-sweep{
+    position:fixed;left:0;top:0;width:340px;height:340px;
+    pointer-events:none;z-index:9998;opacity:0;border-radius:50%;
+    background:radial-gradient(circle,var(--scan-glow) 0%,transparent 62%);
+    transition:opacity .3s ease;will-change:transform,opacity;
+  }
+  #pointer-sweep.on{opacity:1}
+  #pointer-sweep::before{
+    content:"";position:absolute;inset:16%;border-radius:50%;
+    background:radial-gradient(circle,var(--scan-glow-strong) 0%,transparent 70%);
+  }
+  #pointer-sweep .scan-band{
+    position:absolute;left:-6%;right:-6%;top:50%;height:86px;transform:translateY(-50%);
+    background:linear-gradient(to bottom,transparent 0%,var(--scan-band-bg) 34%,var(--scan-band-bg) 66%,transparent 100%);
+    border-top:1px solid var(--scan-line);border-bottom:1px solid var(--scan-line);
+  }
+  #pointer-sweep .scan-band::after{
+    content:"";position:absolute;left:50%;top:-36px;bottom:-36px;width:1px;
+    background:var(--scan-line);opacity:.5;
+  }
+  #pointer-sweep.is-touch{width:280px;height:280px}
+  #pointer-sweep.is-touch .scan-band{height:62px;opacity:.65}
+  /* Outline highlight for the card or section under the pointer.
+     Outline and offset never shift layout, and the colour reads
+     from the card accent where one is set. */
+  .scan-highlight{
+    outline:1.5px solid color-mix(in srgb,var(--ca,var(--accent)) 58%,transparent);
+    outline-offset:3px;
+  }
+  section.scan-highlight{outline-offset:-3px}
+
+  /* SCANNING INDICATOR: a small pill that rides near the pointer and
+     names the section currently being scanned, like the reel. Fixed
+     and pointer-events:none, so it can never block a click, tap,
+     hover or scroll. It starts fully transparent and is only ever
+     shown by the sweep script; if the script cannot run, it never
+     appears and the page shows normally. Colours read from the
+     theme variables, so they stay visible in light and dark modes. */
+  #scan-indicator{
+    position:fixed;left:0;top:0;z-index:10000;pointer-events:none;
+    display:inline-flex;align-items:center;gap:7px;
+    font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.06em;
+    color:var(--text);background:var(--panel);border:1px solid var(--line2);
+    border-radius:999px;padding:6px 11px 6px 9px;box-shadow:var(--float-shadow);
+    opacity:0;transition:opacity .18s ease;will-change:transform,opacity;white-space:nowrap;
+  }
+  #scan-indicator.on{opacity:1}
+  #scan-indicator .scan-dot{
+    width:7px;height:7px;border-radius:50%;flex:none;background:var(--a-teal);
+    animation:scanPulse 0.9s ease-in-out infinite;
+  }
+  @keyframes scanPulse{0%,100%{opacity:1}50%{opacity:.3}}
+  #scan-indicator .scan-name{color:var(--accent-text)}
+
+  /* BLANK-FIRST STATE: applied only by the head gate script when the
+     creation scripts can run and motion is allowed. Every buildable
+     component starts fully hidden (opacity only, so layout, scroll
+     height and hit areas never move) and is revealed only when its
+     build starts: .is-building and .build-done both win over the
+     blank rule. Removing the class from <html> (the failsafe path)
+     reveals everything at once, so the page can never stay blank. */
+  html.build-blank .topnav,
+  html.build-blank .hero-name,
+  html.build-blank .hero-role,
+  html.build-blank .hero-intro,
+  html.build-blank .hero-card,
+  html.build-blank .stats,
+  html.build-blank .sec-head,
+  html.build-blank .card,
+  html.build-blank .companies,
+  html.build-blank .step,
+  html.build-blank .skill-tabs,
+  html.build-blank .skill-panel,
+  html.build-blank .t-item,
+  html.build-blank .cred-box,
+  html.build-blank .contact,
+  html.build-blank footer{
+    opacity:0;
+  }
+  html.build-blank .is-building,
+  html.build-blank .build-done{
+    opacity:1;
+  }
+
+  /* DYNAMIC BUILD EFFECT: when a component scrolls into view, the
+     creation script adds .is-building to it for about two seconds
+     and drops a .build-fx overlay inside it while the swarm cursors
+     work around it. The overlay draws the border in, flashes a
+     wireframe grid, then fades as the content settles. Inside the
+     component the content itself builds too: the script wraps the
+     words of headings and paragraphs in .build-word spans and tags
+     chips, metrics, rows and buttons as .build-piece, each with a
+     staggered --wd delay spread across the full two seconds, so
+     lines and words form visibly in reading order instead of the
+     text sitting static inside a building frame. The overlay is
+     pointer-events:none, and once the build finishes the script
+     unwraps every word span and removes every build class, so the
+     component is left exactly as authored, fully visible, with
+     nothing hidden or moved. Colours read from the card accent
+     (--ca) where one is set, so the effect matches each card and
+     stays visible in both light and dark modes. */
+  .build-host{position:relative}
+  .is-building{animation:buildSettle 2s cubic-bezier(.22,.9,.3,1)}
+  @keyframes buildSettle{
+    0%{transform:translateY(6px);filter:brightness(1.08) saturate(1.06)}
+    45%{transform:translateY(1px)}
+    75%{transform:translateY(-1px)}
+    100%{transform:translateY(0);filter:none}
+  }
+  .build-fx{
+    position:absolute;inset:0;z-index:6;pointer-events:none;border-radius:inherit;
+    border:2px solid color-mix(in srgb,var(--ca,var(--accent)) 75%,transparent);
+    background:
+      repeating-linear-gradient(0deg,color-mix(in srgb,var(--ca,var(--accent)) 16%,transparent) 0 1px,transparent 1px 22px),
+      repeating-linear-gradient(90deg,color-mix(in srgb,var(--ca,var(--accent)) 16%,transparent) 0 1px,transparent 1px 22px),
+      color-mix(in srgb,var(--ca,var(--accent)) 8%,transparent);
+    animation:buildDraw 2s ease-out both;
+  }
+  @keyframes buildDraw{
+    0%{opacity:0;clip-path:inset(0 100% 0 0)}
+    30%{opacity:1;clip-path:inset(0 0 0 0)}
+    72%{opacity:.85}
+    100%{opacity:0;clip-path:inset(0 0 0 0)}
+  }
+  .build-fx::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(105deg,transparent 30%,color-mix(in srgb,var(--ca,var(--accent)) 26%,transparent) 50%,transparent 70%);
+    animation:buildFlash 2s ease-out both;
+  }
+  @keyframes buildFlash{
+    0%{opacity:0;transform:translateX(-38%)}
+    35%{opacity:1}
+    100%{opacity:0;transform:translateX(38%)}
+  }
+  /* Progressive text assembly: each word starts transparent,
+     blurred and slightly dropped, then sharpens into place at its
+     staggered delay. inline-block lets each word transform and
+     blur independently while spaces between the spans keep normal
+     wrapping, so lines form word by word in reading order. */
+  .build-word{
+    display:inline-block;opacity:0;
+    animation:buildWord .45s ease-out both;
+    animation-delay:var(--wd,0ms);
+    will-change:opacity,transform,filter;
+  }
+  @keyframes buildWord{
+    0%{opacity:0;transform:translateY(.3em);filter:blur(4px)}
+    60%{opacity:1;filter:blur(1px)}
+    100%{opacity:1;transform:translateY(0);filter:blur(0)}
+  }
+  /* Whole units (chips, tags, metrics, stat blocks, list rows,
+     buttons and date pills) pop in as single pieces at their turn
+     in the same staggered sequence. */
+  .build-piece{
+    opacity:0;
+    animation:buildPiece .55s cubic-bezier(.22,.9,.3,1) both;
+    animation-delay:var(--wd,0ms);
+    will-change:opacity,transform;
+  }
+  @keyframes buildPiece{
+    0%{opacity:0;transform:translateY(9px) scale(.95)}
+    100%{opacity:1;transform:translateY(0) scale(1)}
+  }
+
+  /* SWARM CURSORS: a fixed layer holding a small pool of arrow
+     cursor glyphs in varied colours. The creation script flies
+     them around whichever component is being built as it scrolls
+     into view: they scatter along its edges, gather at its top
+     centre, then disperse. Fixed and pointer-events:none, so they
+     can never block a click, tap, hover or scroll. Each glyph is
+     coloured through currentColor from the theme palette (the six
+     card accents plus orange, coral, lime and cyan, and the accent
+     of the component being built), with an outline read from the
+     page background, so every cursor stays visible in both light
+     and dark modes. Motion is transform and opacity only, driven
+     by the creation script; hidden entirely under reduced motion. */
+  #swarm-layer{
+    position:fixed;inset:0;overflow:hidden;
+    pointer-events:none;z-index:10001;
+  }
+  .swarm-cursor{
+    position:absolute;left:0;top:0;width:18px;height:18px;opacity:0;
+    will-change:transform,opacity;
+    filter:drop-shadow(0 1px 3px rgba(0,0,0,.35));
+  }
+  .swarm-cursor svg{display:block}
+  .swarm-cursor path{
+    fill:currentColor;stroke:var(--bg);stroke-width:1.4;stroke-linejoin:round;
+  }
+
+  @media (max-width:640px){
+    .fx-orb-a{width:280px;height:280px;top:-110px;right:-90px}
+    .fx-orb-b{width:210px;height:210px;bottom:-90px;left:-80px}
+    .fx-orb-c{display:none}
+    .fx-ring{width:60px;height:60px;top:36px;right:6%}
+    .fx-dots{width:230px;height:130px}
+    .fx-diamond{display:none}
+  }
+
+  /* SECTIONS */
+  section{padding:64px 0 8px}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px;flex-wrap:wrap;border-bottom:2px solid var(--line2);padding-bottom:18px}
+  .sec-head h2{font-family:"Public Sans",sans-serif;font-size:clamp(30px,3.8vw,42px);line-height:1.08;letter-spacing:-.02em;margin:0;font-weight:800}
+  .sec-head p{color:var(--muted);max-width:46ch;margin:0;font-size:15px;line-height:1.6}
+  .sec-label{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--accent-text);margin-bottom:10px}
+  #work .sec-head .sec-label{color:var(--a-violet)}
+  #approach .sec-head .sec-label{color:var(--a-green)}
+  #skills .sec-head .sec-label{color:var(--a-blue)}
+  #experience .sec-head .sec-label{color:var(--a-yellow)}
+  #credentials .sec-head .sec-label{color:var(--a-pink)}
+  #contact .sec-label{color:var(--a-teal)}
+
+  /* WORK CARDS */
+  .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;display:flex;flex-direction:column;gap:0;position:relative;overflow:hidden;box-shadow:var(--card-shadow);
+  }
+  .card.featured{grid-column:1 / -1;background:var(--featured-bg);border-color:var(--line2)}
+  /* Per-card accent colors: tinted border, top strip, metric numbers and
+     detail accents all read from --ca, set per card below. */
+  .work-grid .card{border-color:color-mix(in srgb,var(--ca,var(--accent)) 42%,var(--line))}
+  .work-grid .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--ca,var(--accent))}
+  .work-grid .card:nth-child(1){--ca:var(--a-violet)}
+  .work-grid .card:nth-child(2){--ca:var(--a-green)}
+  .work-grid .card:nth-child(3){--ca:var(--a-blue)}
+  .work-grid .card:nth-child(4){--ca:var(--a-yellow)}
+  .work-grid .card:nth-child(5){--ca:var(--a-pink)}
+  .work-grid .card:nth-child(6){--ca:var(--a-teal)}
+  .card-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+  .company{font-family:"Public Sans",sans-serif;font-size:13px;font-weight:600;color:var(--ink2)}
+  .company b{color:var(--text);font-weight:700}
+  .when{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;color:var(--ink2);white-space:nowrap;background:var(--panel2);border:1px solid var(--line2);padding:5px 9px;border-radius:999px}
+  .card h3{font-family:"Public Sans",sans-serif;font-size:clamp(20px,2.3vw,24px);line-height:1.2;letter-spacing:-.015em;margin:14px 0 10px;font-weight:700}
+  .card .lede{color:var(--muted);font-size:14.5px;line-height:1.65;margin:0}
+  .metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .metric{background:var(--metric-bg);border:1px solid var(--line2);border-radius:10px;padding:12px 14px;min-width:118px;flex:1}
+  .metric .m-num{font-family:"Public Sans",sans-serif;font-weight:800;font-size:24px;line-height:1;color:var(--ca,var(--accent-text))}
+  .metric .m-lbl{font-size:11.5px;color:var(--ink2);margin-top:5px;line-height:1.4;font-weight:500}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+  .tags span{font-size:11px;font-weight:600;letter-spacing:.02em;padding:5px 9px;border-radius:999px;background:var(--panel2);border:1px solid var(--line2);color:var(--ink2)}
+  .expand-btn{
+    margin-top:20px;align-self:flex-start;background:transparent;border:1px solid var(--line2);color:var(--text);
+    font-family:"Public Sans",sans-serif;font-weight:700;font-size:13px;padding:9px 14px;border-radius:10px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .expand-btn:hover{border-color:var(--ca,var(--accent));color:var(--ca,var(--accent-text))}
+  .expand-btn svg{transition:transform .25s}
+  .card.open .expand-btn svg{transform:rotate(45deg)}
+  .details{display:none;margin-top:18px;border-top:1px dashed var(--line2);padding-top:18px}
+  .card.open .details{display:block}
+  .details h4{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ca,var(--accent-text));margin:0 0 8px}
+  .details ul{margin:0 0 16px;padding-left:18px;color:var(--ink2);font-size:14px;line-height:1.65}
+  .details ul:last-child{margin-bottom:0}
+  .details li{margin-bottom:6px}
+  .details li::marker{color:var(--ca,var(--accent-text))}
+
+  .companies{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px;
+  }
+  .companies span{
+    font-weight:600;font-size:14px;color:var(--ink2);
+    border:1px solid var(--line2);border-radius:999px;padding:10px 16px;background:var(--panel);
+  }
+  .companies span:hover{color:var(--text);border-color:var(--line2)}
+  .companies-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);width:100%;margin-bottom:2px}
+
+  /* HOW I WORK */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--card-shadow)}
+  .step .n{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--accent-text);line-height:1}
+  .step h3{font-family:"Public Sans",sans-serif;margin:12px 0 8px;font-size:19px;font-weight:700}
+  .step p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
+  .step ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:7px}
+  .step li{font-size:13px;color:var(--ink2);display:flex;gap:8px;align-items:flex-start;line-height:1.45}
+  .step li::before{content:"→";color:var(--accent-text);font-weight:700;flex:none}
+
+  /* SKILLS */
+  .skill-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .skill-tabs button{
+    font-family:"Public Sans",sans-serif;font-weight:700;font-size:13px;cursor:pointer;
+    padding:9px 15px;border-radius:10px;border:1px solid var(--line2);background:var(--panel);color:var(--ink2);
+  }
+  .skill-tabs button.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .skill-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--card-shadow)}
+  .skill-panel h3{margin:0 0 6px;font-family:"Public Sans",sans-serif;font-size:19px;font-weight:700}
+  .skill-panel>p{margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.6;max-width:68ch}
+  .pill-cloud{display:flex;flex-wrap:wrap;gap:8px}
+  .pill-cloud span{font-size:13px;font-weight:600;padding:8px 12px;border-radius:999px;background:var(--panel2);border:1px solid var(--line2);color:var(--ink2)}
+  .pill-cloud span.hot{background:var(--chip-bg);border-color:var(--chip-line);color:var(--chip-text)}
+
+  /* TIMELINE */
+  .timeline{position:relative;margin-left:6px}
+  .timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:var(--line2)}
+  .t-item{position:relative;padding:0 0 30px 36px}
+  .t-item:last-child{padding-bottom:6px}
+  .t-item::before{content:"";position:absolute;left:0;top:7px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:2px solid var(--accent-text)}
+  .t-item.muted-dot::before{border-color:var(--muted2)}
+  .t-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
+  .t-head h3{margin:0;font-family:"Public Sans",sans-serif;font-size:19px;font-weight:700}
+  .t-head .org{color:var(--accent-text);font-weight:700;font-size:14px}
+  .t-head .date{font-family:"JetBrains Mono",monospace;font-size:11.5px;font-weight:600;color:var(--muted);margin-left:auto}
+  .t-item p{margin:8px 0 0;color:var(--muted);font-size:14.5px;line-height:1.65;max-width:78ch}
+  .t-item p b{color:var(--text)}
+
+  /* CREDENTIALS */
+  .cred-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+  .cred-box{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--card-shadow)}
+  .cred-box h3{margin:0 0 16px;font-family:"Public Sans",sans-serif;font-size:17px;font-weight:700}
+  .cred-list{list-style:none;margin:0;padding:0;display:grid}
+  .cred-list li{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:14px}
+  .cred-list li:first-child{border-top:none;padding-top:0}
+  .cred-list li b{font-weight:700;line-height:1.4}
+  .cred-list li span{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+  .cred-list li time{font-family:"JetBrains Mono",monospace;font-size:11.5px;font-weight:600;color:var(--muted);white-space:nowrap;padding-top:3px}
+
+  /* CONTACT */
+  .contact{
+    margin:64px 0 0;background:var(--contact-bg);border:1px solid var(--line2);border-radius:16px;
+    padding:clamp(28px,5vw,52px);position:relative;overflow:hidden;
+  }
+  .contact h2{font-family:"Public Sans",sans-serif;font-size:clamp(32px,4.6vw,48px);line-height:1.05;letter-spacing:-.02em;margin:0 0 14px;font-weight:800}
+  .contact p{color:var(--muted);font-size:16px;line-height:1.65;max-width:58ch;margin:0}
+  .email-card{margin-top:26px;background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:clamp(20px,3.4vw,30px)}
+  .email-big{display:inline-block;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:clamp(16px,3.2vw,25px);letter-spacing:-.01em;color:var(--text);text-decoration:none;overflow-wrap:anywhere}
+  .email-big:hover{color:var(--a-teal);text-decoration:underline}
+  .email-card .contact-actions{margin-top:20px}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .btn{
+    text-decoration:none;font-weight:700;font-size:14.5px;padding:13px 20px;border-radius:10px;display:inline-flex;align-items:center;gap:9px;
+    font-family:"Public Sans",sans-serif;cursor:pointer;
+  }
+  .btn.primary{background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent)}
+  .btn.primary:hover{background:var(--accent-hover)}
+  .btn.ghost{border:1px solid var(--line2);color:var(--text);background:var(--ghost-bg)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent-text)}
+  .contact-meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+  .contact-meta b{color:var(--text)}
+  .contact-meta .meta-focus{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+
+  footer{padding:28px 0 40px;color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  /* WIDE SCREENS: use the resolution instead of stranding content in a
+     narrow center column. The container widens in steps and type, gaps
+     and section spacing scale up with it. */
+  @media (min-width:1500px){
+    .wrap{max-width:1440px}
+    .hero{padding-top:64px}
+    .hero-name{font-size:104px}
+    .hero-role{font-size:24px}
+    .hero-intro p{font-size:17.5px}
+    .hero-grid{gap:36px}
+    .work-grid{gap:20px}
+    .steps{gap:20px}
+    .cred-grid{gap:20px}
+    section{padding-top:76px}
+    .sec-head h2{font-size:42px}
+    .sec-head p{font-size:16px}
+    .card{padding:30px}
+    .card h3{font-size:26px}
+    .card .lede{font-size:15.5px}
+    .stat{padding:26px 24px}
+    .stat .num{font-size:42px}
+  }
+  @media (min-width:1850px){
+    .wrap{max-width:1640px;padding:0 40px}
+    .hero-name{font-size:116px}
+    .hero-role{font-size:26px}
+    .hero-intro p{font-size:18px;line-height:1.75}
+    .hero-card{padding:26px}
+    .hero-card p{font-size:14.5px}
+    .fact-list li{font-size:14.5px}
+    .stat .num{font-size:46px}
+    .stat .lbl{font-size:14px}
+    .sec-head h2{font-size:46px}
+  }
+
+  /* ULTRAWIDE / 4K: keep using the extra width instead of stranding the
+     content in a centered strip. */
+  @media (min-width:2200px){
+    .wrap{max-width:1840px}
+    body{font-size:17px}
+    .hero-name{font-size:124px}
+  }
+
+  /* TABLET PORTRAIT / SMALL LAPTOP: tighten before the full mobile stack. */
+  @media (max-width:1100px){
+    .hero-grid{grid-template-columns:1.1fr .9fr;gap:22px}
+    .card{padding:22px}
+    .stat{padding:18px 16px}
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:0 18px}
+  }
+
+  /* SMALL PHONES (down to ~320px wide): stack tight rows, shrink padding,
+     and let buttons and fact rows use the full width without overflowing. */
+  @media (max-width:480px){
+    .hero{padding-top:36px}
+    .hero-name{font-size:44px}
+    .hero-role{font-size:16.5px}
+    .hero-intro p{font-size:15.5px}
+    .hero-card{padding:18px}
+    .fact-list li{flex-wrap:wrap;gap:2px 12px}
+    .fact-list li b{text-align:left}
+    .stats{grid-template-columns:1fr 1fr}
+    .stat{padding:16px 14px}
+    .stat .num{font-size:26px}
+    .stat .lbl{font-size:12.5px}
+    .card{padding:20px 18px}
+    .card-top{flex-wrap:wrap}
+    .metric{min-width:0;flex:1 1 calc(50% - 5px)}
+    .metric .m-num{font-size:20px}
+    .steps .step,.skill-panel,.cred-box{padding:20px 18px}
+    .sec-head{margin-bottom:22px}
+    .contact{padding:26px 20px}
+    .contact-actions .btn{flex:1 1 100%;justify-content:center;text-align:center}
+    .cred-list li{flex-wrap:wrap;gap:2px 10px}
+    .t-item{padding-left:28px}
+    .skill-tabs button{flex:1 1 auto;text-align:center}
+    footer{flex-direction:column;gap:4px}
+  }
+  @media (max-width:360px){
+    .stats{grid-template-columns:1fr}
+    .nav-links a{padding:6px 8px}
+    .role-tags span{font-size:11.5px;padding:6px 10px}
+  }
+  @media (max-width:860px){
+    .topnav-inner{flex-wrap:wrap;row-gap:10px}
+    .nav-links{order:2;width:100%}
+    .nav-links a{font-size:12px;padding:7px 10px}
+    .nav-cta{order:1;margin-left:auto;padding:8px 14px;font-size:12.5px}
+    .hero-grid{grid-template-columns:1fr}
+    .work-grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .cred-grid{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .avail{display:none}
+    section{padding-top:54px}
+    .t-head .date{margin-left:0;width:100%}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    html.build-blank .topnav,
+    html.build-blank .hero-name,
+    html.build-blank .hero-role,
+    html.build-blank .hero-intro,
+    html.build-blank .hero-card,
+    html.build-blank .stats,
+    html.build-blank .sec-head,
+    html.build-blank .card,
+    html.build-blank .companies,
+    html.build-blank .step,
+    html.build-blank .skill-tabs,
+    html.build-blank .skill-panel,
+    html.build-blank .t-item,
+    html.build-blank .cred-box,
+    html.build-blank .contact,
+    html.build-blank footer{opacity:1}
+    #cursor-trail{display:none}
+    #pointer-sweep{display:none}
+    #scan-indicator{display:none}
+    #swarm-layer{display:none}
+    .build-fx{display:none}
+    .is-building{animation:none}
+    .build-word,.build-piece{animation:none;opacity:1}
+    .hero .hero-card,.hero-fx,.fx-orb,.fx-dots,.fx-ring,.fx-plus,.fx-diamond,.fx-dot,.hero .role-tags span,.hero-card::after{animation:none}
+    .hero-fx,.fx-layer{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<canvas id="cursor-trail" aria-hidden="true"></canvas>
+
+<!-- SCANNING SWEEP: decorative layer the trail script moves with
+     the pointer; pointer-events:none in CSS, hidden from AT. -->
+<div id="pointer-sweep" aria-hidden="true"><div class="scan-band"></div></div>
+
+<!-- SCANNING INDICATOR: decorative pill the sweep script shows while
+     the pointer is moving; it names the section being scanned.
+     Hidden by default and pointer-events:none in CSS. -->
+<div id="scan-indicator" aria-hidden="true"><span class="scan-dot"></span><span>Scanning: <span class="scan-name"></span></span></div>
+
+<!-- SWARM LAYER: decorative fixed layer the creation script fills
+     with a pool of small coloured cursor glyphs that build each
+     component as it scrolls into view. Empty and invisible until
+     the script runs; pointer-events:none in CSS, hidden from AT. -->
+<div id="swarm-layer" aria-hidden="true"></div>
+
+<header class="topnav">
+  <div class="wrap topnav-inner">
+    <div class="avail"><span class="dot"></span> Toronto, ON · Open to PM / BA roles</div>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-fx" aria-hidden="true">
+    <div class="fx-layer fx-d3"><div class="fx-orb fx-orb-a"></div><div class="fx-orb fx-orb-b"></div><div class="fx-orb fx-orb-c"></div></div>
+    <div class="fx-layer fx-d2"><div class="fx-dots"></div><span class="fx-diamond"></span></div>
+    <div class="fx-layer fx-d1"><span class="fx-ring"></span><span class="fx-plus"></span><span class="fx-dot fx-dot-1"></span><span class="fx-dot fx-dot-2"></span><span class="fx-dot fx-dot-3"></span></div>
+  </div>
+  <div class="wrap">
+    <h1 class="hero-name">Dhrumil Waghela</h1>
+    <p class="hero-role">Product Manager &amp; Business Analyst: Digital Banking, Payments and AI Products</p>
+
+    <div class="hero-grid">
+      <div class="hero-intro">
+        <p>Senior Product Manager / Senior Business Analyst with <strong>8+ years</strong> across banking, insurance and FinTech. I own backlogs end-to-end, turn business needs into FRDs, user stories and API requirements, and work directly with engineering, design and data teams to deliver customer-facing products, from <strong>ICICI Bank and Kotak</strong> in India to <strong>Mercury, Sparcks and GS1</strong> in North America.</p>
+        <div class="role-tags">
+          <span>Product Management</span>
+          <span>Business Analysis</span>
+          <span>Digital Banking &amp; Payments</span>
+          <span>AI Products</span>
+          <span>Agile Delivery</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>At a Glance</h3>
+        <p>Dual MBA · CBAP &amp; Certified Product Manager · Based in Toronto, working across Canada, the US and India.</p>
+        <ul class="fact-list">
+          <li class="fact-stack"><span>Focus</span><div class="chips"><span>FinTech</span><span>Payments</span><span>AI</span></div></li>
+          <li class="fact-stack"><span>Core craft</span><div class="chips"><span>Roadmaps</span><span>FRDs</span><span>APIs</span><span>UAT</span></div></li>
+          <li class="fact-stack"><span>Domains</span><div class="chips"><span>Banking</span><span>Insurance</span><span>FinTech</span><span>LMS</span><span>GS1 Supply Chain Standards</span></div></li>
+          <li class="fact-stack"><span>Location</span><div class="chips"><span>Toronto, ON, Canada</span></div></li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="stats" aria-label="Career highlights">
+      <div class="stat"><div class="num"><span data-count="8">0</span><i>+</i></div><div class="lbl">Years in Product &amp; Business Analysis</div></div>
+      <div class="stat"><div class="num"><span data-count="5">0</span></div><div class="lbl">Companies: GS1, Sparcks, Mercury, Kotak, ICICI</div></div>
+      <div class="stat"><div class="num"><span data-count="35">0</span><i>%</i></div><div class="lbl">Manual Processing Time Cut at Sparcks</div></div>
+      <div class="stat"><div class="num">&lt;<span data-count="5">0</span><i> min</i></div><div class="lbl">Video → Interactive PPT, AI Project at Sparcks</div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-label">[01]</div>
+        <h2>Selected Work</h2>
+      </div>
+      <p>Case studies from my resume: the problem, what I owned, and the measurable result. Select “Case Details” on any card for the full breakdown.</p>
+    </div>
+
+    <div class="work-grid">
+<!-- GS1 featured -->
+      <article class="card featured">
+        <div class="card-top">
+          <div class="company"><b>GS1 Canada</b> &nbsp;·&nbsp; Senior Business Analyst (Seasonal)</div>
+          <div class="when">Aug – Oct 2026</div>
+        </div>
+        <h3>From 13 Business Requirements to a Build-Ready Specification</h3>
+        <p class="lede">Partnered with the Program Manager to structure and prioritize the product roadmap, then owned the requirements lifecycle end-to-end, turning stakeholder needs into functional specs, Visio user journeys and data definitions engineering could build against with full traceability.</p>
+        <div class="metrics">
+          <div class="metric"><div class="m-num">114</div><div class="m-lbl">Functional Requirements from 13 Major Business Requirements (+11 Non-Functional)</div></div>
+          <div class="metric teal"><div class="m-num">150+</div><div class="m-lbl">Data Elements Documented: Mapping Dictionaries, Business Rules &amp; Validation Specs</div></div>
+          <div class="metric amber"><div class="m-num">−28%</div><div class="m-lbl">Validation Exceptions, with a 19% Improvement in Processing Cycle Time</div></div>
+        </div>
+        <div class="tags"><span>FRD Authorship</span><span>Microsoft Visio</span><span>User Stories → Use Cases</span><span>Roadmap Support</span><span>Solution Engineering</span></div>
+        <button class="expand-btn" type="button" aria-expanded="false">Case Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="details">
+          <h4>What I did</h4>
+          <ul>
+            <li>Partnered with the Program Manager to define and prioritize the product roadmap, aligning business objectives with delivery timelines.</li>
+            <li>Authored the FRD with a structured approach: converting user stories into use cases and building process flows in Microsoft Visio to give engineering and stakeholders a clear user journey.</li>
+            <li>Annotated the end-to-end product design against the FRD, ensuring requirements traceability and design-to-spec alignment, and resolved design-to-requirement gaps with business and technology stakeholders.</li>
+            <li>Evaluated supply chain onboarding workflows and data discrepancies, defining corrective requirements; consulted the technology team on solution engineering.</li>
+            <li>Built an understanding of GS1's business itself, how its supply chain standards and member onboarding work in practice, so the requirements were grounded in the business context and not just the systems.</li>
+          </ul>
+        </div>
+      </article>
+<!-- Sparcks payments -->
+      <article class="card">
+        <div class="card-top">
+          <div class="company"><b>Sparcks</b> · Canada · Senior Product Manager</div>
+          <div class="when">Jan – Jul 2026</div>
+        </div>
+        <h3>Payments &amp; Reconciliation for an Enterprise LMS</h3>
+        <p class="lede">Owned the financial-workflow product suite inside Sparcks' learning platform: vision, roadmap and quarterly OKRs for payment processing, reconciliation and financial reporting across four enterprise clients, including Stripe API integration projects.</p>
+        <div class="metrics">
+          <div class="metric"><div class="m-num">−35%</div><div class="m-lbl">Manual Processing Time from Streamlined Payment Journeys</div></div>
+          <div class="metric teal"><div class="m-num">−60%</div><div class="m-lbl">Manual Reconciliation Touchpoints via AI-Enabled Exception Handling</div></div>
+          <div class="metric amber"><div class="m-num">95%</div><div class="m-lbl">On-Time Milestone Delivery while Owning the Backlog Day-to-Day</div></div>
+        </div>
+        <div class="tags"><span>Stripe API</span><span>Reconciliation</span><span>Power BI Dashboards</span><span>BRD / FRD</span><span>Backlog Ownership</span></div>
+        <button class="expand-btn" type="button" aria-expanded="false">Case Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="details">
+          <h4>What I did</h4>
+          <ul>
+            <li>Led Stripe API integration projects for payment processing and reconciliation, partnering with engineering on integration design, testing and production rollout.</li>
+            <li>Built AI-powered KPI dashboards in Power BI tracking 10+ financial metrics (transaction throughput, error rates, processing latency) for real-time executive decision-making.</li>
+            <li>Documented 65 requirements; mapped user journeys, business rules and technical data flows, addressing 14 system integration dependencies before development.</li>
+            <li>Facilitated sprint planning and backlog refinement, resolving nine cross-functional dependencies across four planned releases; workflow automation recommendations targeted 120 hours/month of manual effort saved.</li>
+          </ul>
+        </div>
+      </article>
+<!-- Sparcks AI -->
+      <article class="card">
+        <div class="card-top">
+          <div class="company"><b>Sparcks</b> · Canada · AI Project</div>
+          <div class="when">2026</div>
+        </div>
+        <h3>Learning Videos → Interactive PPTs in Under 5 Minutes</h3>
+        <p class="lede">Drove an AI project that converts learning videos into interactive presentations in under 300 seconds, speeding up course content creation for enterprise clients, and translated computer-vision capabilities into functional requirements for AI-enabled interfaces.</p>
+        <div class="metrics">
+          <div class="metric"><div class="m-num">&lt;5 min</div><div class="m-lbl">End-to-End Video-to-PPT Conversion Time</div></div>
+          <div class="metric teal"><div class="m-num">−22%</div><div class="m-lbl">Workflow Rework Targeted from Legacy-Integration Fixes</div></div>
+          <div class="metric amber"><div class="m-num">−18%</div><div class="m-lbl">Development Rework after Closing 12+ Requirement Gaps</div></div>
+        </div>
+        <div class="tags"><span>Generative AI</span><span>Computer Vision Requirements</span><span>Semantic Logic Flows</span><span>Edge Cases</span><span>Acceptance Criteria</span></div>
+        <button class="expand-btn" type="button" aria-expanded="false">Case Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="details">
+          <h4>What I did</h4>
+          <ul>
+            <li>Translated business needs into prioritized user stories, process flows and acceptance criteria for enterprise LMS and generative AI initiatives.</li>
+            <li>Defined semantic logic flows, edge cases and acceptance criteria for automated handshape recognition, turning a computer-vision capability into buildable requirements.</li>
+            <li>Analyzed legacy integration constraints and operational friction points, defining corrective requirements and resolving feature-level gaps with business and engineering teams.</li>
+          </ul>
+        </div>
+      </article>
+<!-- Mercury -->
+      <article class="card">
+        <div class="card-top">
+          <div class="company"><b>Mercury</b> · USA · Product Manager, Operations</div>
+          <div class="when">Jan 2024 – Dec 2025</div>
+        </div>
+        <h3>AI-Assisted Workflows &amp; Cross-Border Payments</h3>
+        <p class="lede">Owned business cases through execution for AI-enabled financial products: the API integrations and data flows behind onboarding and financial workflows, specified across 35 business scenarios and five system integration deliverables.</p>
+        <div class="metrics">
+          <div class="metric"><div class="m-num">+25%</div><div class="m-lbl">Processing Efficiency from Intelligent Automation</div></div>
+          <div class="metric teal"><div class="m-num">−25%</div><div class="m-lbl">Onboarding Drop-Off via Journey Mapping &amp; A/B Testing</div></div>
+          <div class="metric amber"><div class="m-num">88</div><div class="m-lbl">Financial Reconciliation Rules Validated with SQL</div></div>
+        </div>
+        <div class="tags"><span>REST APIs</span><span>Cross-Border Payments</span><span>SQL Validation</span><span>KPI Frameworks</span><span>AI Automation</span></div>
+        <button class="expand-btn" type="button" aria-expanded="false">Case Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="details">
+          <h4>What I did</h4>
+          <ul>
+            <li>Documented REST API requirements, data transformation rules and integration dependencies: defining what data the AI workflows needed, where it came from, and how systems passed it back and forth.</li>
+            <li>Used SQL to profile transaction data, build data-mapping specifications and validate reconciliation rules across integrated platforms.</li>
+            <li>Investigated payment-routing failures and ledger discrepancies, documenting root causes and corrective business rules linked to a 31% reduction in unresolved exceptions.</li>
+            <li>Established KPI frameworks and executive dashboards/ROI reports for onboarding completion, feature adoption and operational efficiency.</li>
+          </ul>
+        </div>
+      </article>
+<!-- Kotak -->
+      <article class="card">
+        <div class="card-top">
+          <div class="company"><b>Kotak Mahindra Life Insurance</b> · India · AVP, Digital Transformation</div>
+          <div class="when">Sep 2022 – Dec 2023</div>
+        </div>
+        <h3>Digital Transformation Across Advisor Onboarding, Policy Servicing &amp; Claims</h3>
+        <p class="lede">Led design, development and implementation of digital transformation initiatives (110 requirements across customer portals and internal claims systems) using current/future-state mapping to find the bottlenecks, and worked with Compliance, Risk and Legal to harden governance.</p>
+        <div class="metrics">
+          <div class="metric"><div class="m-num">+35%</div><div class="m-lbl">Advisor Productivity</div></div>
+          <div class="metric teal"><div class="m-num">+40%</div><div class="m-lbl">Operational Efficiency; 40% Fewer Manual Interventions Targeted</div></div>
+          <div class="metric amber"><div class="m-num">−30%</div><div class="m-lbl">Compliance Incidents from New Controls &amp; Audit Checkpoints</div></div>
+          <div class="metric"><div class="m-num">110</div><div class="m-lbl">Requirements Documented; 45 Functional Scenarios with Acceptance Criteria</div></div>
+        </div>
+        <div class="tags"><span>Process Mapping</span><span>Claims Systems</span><span>Regulatory Controls</span><span>Power BI · Excel</span><span>SOPs &amp; Change Management</span></div>
+        <button class="expand-btn" type="button" aria-expanded="false">Case Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="details">
+          <h4>What I did</h4>
+          <ul>
+            <li>Facilitated stakeholder discovery workshops to gather business, operational and regulatory requirements, aligning stakeholders with technical implementation.</li>
+            <li>Specified automated verification requirements that cut processing time by 34% in legacy collection workflows; resolved 18 high-priority functional gaps in pre-release walkthroughs with executives, architects and QA leads.</li>
+            <li>Designed operational dashboards and tracking reports in Power BI and Excel for SLA adherence, advisor productivity and compliance metrics.</li>
+            <li>Created SOPs and coordinated stakeholder communication across business units for enterprise change management and rollout.</li>
+          </ul>
+        </div>
+      </article>
+<!-- ICICI featured -->
+      <article class="card featured">
+        <div class="card-top">
+          <div class="company"><b>ICICI Bank</b> · India · Sr PM, Digital Banking &amp; Payments</div>
+          <div class="when">Dec 2019 – Jul 2022</div>
+        </div>
+        <h3>Digital Banking &amp; Payments at Bank Scale</h3>
+        <p class="lede">Led design and delivery of strategic digital banking and payment initiatives across Business, Operations, Engineering, Risk and Compliance: writing FRDs/BRDs alongside the PRD, running UAT and defect triage, and handling REST/Push API details with the project team.</p>
+        <div class="metrics">
+          <div class="metric"><div class="m-num">+50%</div><div class="m-lbl">Customer Onboarding Efficiency</div></div>
+          <div class="metric teal"><div class="m-num">−40%</div><div class="m-lbl">Loan Processing Time; 40% Efficiency Gain from BPMN-Driven Automation</div></div>
+          <div class="metric amber"><div class="m-num">240</div><div class="m-lbl">UAT Test Scenarios Validated for Banking Readiness</div></div>
+        </div>
+        <div class="tags"><span>Digital Banking</span><span>REST / Push APIs</span><span>BPMN</span><span>UAT &amp; Defect Triage</span><span>AML / KYC Controls</span><span>SQL · SSRS</span></div>
+        <button class="expand-btn" type="button" aria-expanded="false">Case Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="details">
+          <h4>What I did</h4>
+          <ul>
+            <li>Led requirements elicitation for mobile banking and retail payment systems: functional specifications and edge-case models across 75 banking scenarios.</li>
+            <li>Built use cases, data-mapping specs and process-flow diagrams for third-party payment integrations, validating 18 transaction and messaging scenarios.</li>
+            <li>Investigated payment-routing failures and reconciliation imbalances; recommended process improvements targeting 27% faster transaction resolution.</li>
+            <li>Embedded AML, KYC and maker-checker controls with Risk, Compliance and Audit; supported eight banking system releases with standardized documentation in SQL, Confluence and enterprise workflow tools.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="companies">
+      <span class="companies-label">Where the work happened</span>
+      <span>GS1 Canada</span><span>Sparcks</span><span>Mercury</span><span>Kotak Mahindra Life</span><span>ICICI Bank</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-label">[02]</div>
+        <h2>How I Work</h2>
+      </div>
+      <p>The pattern behind every case above: understand the real workflow first, document it precisely, then stay with the delivery through validation.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">01</div>
+        <h3>Discover &amp; Map</h3>
+        <p>Stakeholder workshops, user research and Voice of Customer, then current-state / future-state mapping (BPMN) to find where the workflow actually breaks.</p>
+        <ul><li>Customer journey mapping</li><li>Root cause &amp; gap analysis</li><li>Hypothesis-driven priorities</li></ul>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <h3>Specify &amp; Prioritize</h3>
+        <p>Business needs become BRDs, PRDs and FRDs: user stories into use cases, with acceptance criteria, data mappings and API requirements. Backlog owned daily.</p>
+        <ul><li>User stories &amp; acceptance criteria</li><li>Process flows in Visio / Lucidchart</li><li>Roadmap &amp; OKR alignment</li></ul>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <h3>Deliver &amp; Validate</h3>
+        <p>Sprint planning, UAT strategy and defect triage with engineering and QA, then KPI dashboards in Power BI and SQL to prove the outcome, not just the launch.</p>
+        <ul><li>UAT planning &amp; test cases</li><li>Release validation</li><li>KPI, OKR &amp; ROI measurement</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-label">[03]</div>
+        <h2>Skills</h2>
+      </div>
+      <p>Grouped by area of practice. Select a tab to view each group.</p>
+    </div>
+
+    <div class="skill-tabs" role="tablist" aria-label="Skill groups">
+      <button type="button" class="active" data-tab="product" role="tab" aria-selected="true">Product</button>
+      <button type="button" data-tab="ba" role="tab" aria-selected="false">Business Analysis</button>
+      <button type="button" data-tab="ai" role="tab" aria-selected="false">AI Products</button>
+      <button type="button" data-tab="payments" role="tab" aria-selected="false">Banking &amp; Payments</button>
+      <button type="button" data-tab="data" role="tab" aria-selected="false">Data &amp; Tools</button>
+    </div>
+
+    <div class="skill-panel" id="skillPanel"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-label">[04]</div>
+        <h2>Experience</h2>
+      </div>
+      <p>Eight-plus years, three countries, one thread: financial workflows made simpler, for customers, advisors and operations teams.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-head"><h3>Senior Business Analyst (Seasonal)</h3><span class="org">GS1 Canada</span><span class="date">Aug 2026 – Oct 2026 · Canada</span></div>
+        <p>Roadmap support with the Program Manager; authored the FRD (<b>13 business requirements → 114 functional + 11 non-functional</b>), Visio user journeys, <b>150+ data elements</b> documented, and end-to-end design annotation for traceability. Also built an understanding of GS1's business and its supply chain standards domain, not just the delivery work.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-head"><h3>Senior Product Manager</h3><span class="org">Sparcks</span><span class="date">Jan 2026 – Jul 2026 · Canada</span></div>
+        <p>Owned the financial-workflow suite of an enterprise LMS for four enterprise clients: payments, reconciliation, reporting. <b>Stripe API integrations</b>, <b>−35% manual processing</b>, AI video-to-PPT in <b>under 5 minutes</b>, 95% on-time delivery.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-head"><h3>Product Manager, Operations</h3><span class="org">Mercury</span><span class="date">Jan 2024 – Dec 2025 · USA (Remote)</span></div>
+        <p>AI-enabled financial products and cross-border payments: API integration requirements across <b>five deliverables</b>, <b>88 reconciliation rules</b> validated in SQL, <b>+25% processing efficiency</b> and <b>−25% onboarding drop-off</b>.</p>
+      </div>
+      <div class="t-item muted-dot">
+        <div class="t-head"><h3>Assistant Vice President, Digital Transformation</h3><span class="org">Kotak Mahindra Life Insurance</span><span class="date">Sep 2022 – Dec 2023 · India</span></div>
+        <p>Digital transformation across advisor onboarding, policy servicing and claims: <b>110 requirements</b>, <b>+35% advisor productivity</b>, <b>+40% operational efficiency</b>, <b>−30% compliance incidents</b>.</p>
+      </div>
+      <div class="t-item muted-dot">
+        <div class="t-head"><h3>Senior Product Manager, Digital Banking &amp; Payments</h3><span class="org">ICICI Bank</span><span class="date">Dec 2019 – Jul 2022 · India</span></div>
+        <p>Digital banking and payment initiatives at scale: <b>+50% onboarding efficiency</b>, <b>−40% loan processing time</b>, <b>240 UAT scenarios</b>, FRDs/BRDs alongside the PRD, REST/Push API work and SQL validation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-label">[05]</div>
+        <h2>Credentials</h2>
+      </div>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-box">
+        <h3>Certifications</h3>
+        <ul class="cred-list">
+          <li><div><b>IBM AI Product Manager</b><span>IBM</span></div><time>Jan 2026</time></li>
+          <li><div><b>Certified Business Analysis Professional (CBAP)</b><span>IIBA</span></div><time>Nov 2025</time></li>
+          <li><div><b>Certified Product Manager (CPM)</b><span>AIPMM</span></div><time>Oct 2025</time></li>
+          <li><div><b>FinTech Innovations Specialization</b><span>University of Michigan</span></div><time>Apr 2025</time></li>
+          <li><div><b>Payment Systems in USA &amp; Canada</b><span>Frameworks certification</span></div><time>Jan 2023</time></li>
+          <li><div><b>Digital Payments &amp; Banking</b><span>Certification</span></div><time>Jun 2022</time></li>
+        </ul>
+      </div>
+      <div class="cred-box">
+        <h3>Education: Dual MBA</h3>
+        <ul class="cred-list">
+          <li><div><b>MBA: Technology, Innovation &amp; Entrepreneurship</b><span>International Business University · Toronto, ON, Canada</span></div><time>2024 – 2025</time></li>
+          <li><div><b>MBA: General Management</b><span>Indian Institute of Management (IIM) Rohtak · India</span></div><time>2017 – 2019</time></li>
+        </ul>
+        <h3 style="margin-top:24px">Currently</h3>
+        <p style="margin:0;color:var(--muted);font-size:14px;line-height:1.65">Based in Toronto and actively exploring Senior Product Manager and Senior Business Analyst roles in FinTech, Payments and AI Products.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact" id="contact">
+      <div class="sec-label">[06]</div>
+      <h2>Let's talk.</h2>
+      <p>I'm a Toronto-based Product Manager with 8+ years across banking, payments, and AI, open to Product Manager and Senior Business Analyst roles. If my experience fits a role you're hiring for, I'd welcome a conversation.</p>
+      <div class="email-card">
+        <a class="email-big" href="mailto:dhrumilwaghela565@gmail.com">dhrumilwaghela565@gmail.com</a>
+        <div class="contact-actions">
+          <button class="btn primary" type="button" id="copyEmailBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="copyEmailLabel">Copy email</span>
+          </button>
+        <a class="btn ghost" href="tel:+14377794888">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +1 (437) 779-4888
+        </a>
+        </div>
+      </div>
+      <div class="contact-meta">
+        <span><b>Location</b> &nbsp;Toronto, ON, Canada</span>
+        <span class="meta-focus"><b>Focus</b><span class="chips"><span>FinTech</span><span>Payments</span><span>AI Products</span></span></span>
+        <span><b>Experience</b> &nbsp;8+ years · Canada / US / India</span>
+      </div>
+    </div>
+
+    <footer>
+      <span>Dhrumil Waghela · Product Manager · FinTech, AI &amp; Digital Banking</span>
+      <span class="mono">Toronto, ON</span>
+    </footer>
+  </div>
+</section>
+
+<script>
+(function(){
+  // Animated counters (IO trigger + timed fallback so numbers always land)
+  var counters = document.querySelectorAll('[data-count]');
+  var counted = false;
+  // The stats count up the first time they scroll into view, with
+  // a timed fallback so the numbers always land.
+  function runCounters(){
+    if (counted) return; counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var start = null;
+      function step(ts){
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / 900, 1);
+        el.textContent = Math.round(target * p);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var statsEl = document.querySelector('.stats');
+  if (statsEl && 'IntersectionObserver' in window) {
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { runCounters(); io2.disconnect(); } });
+    }, {threshold: 0.15, rootMargin: '0px 0px 200px 0px'});
+    io2.observe(statsEl);
+  }
+  setTimeout(runCounters, 1600);
+
+  // Expandable case details
+  document.querySelectorAll('.expand-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.card');
+      var open = card.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.firstChild.textContent = open ? 'Hide Details ' : 'Case Details ';
+    });
+  });
+
+  // Skills tabs
+  var SKILLS = {
+    product: {
+      title: 'Product Management & Strategy',
+      desc: 'Full lifecycle ownership: from discovery and roadmapping to backlog, launch and measurement.',
+      pills: ['Product Strategy & Roadmapping','Product Lifecycle (Concept to Launch)','Agile / Scrum Product Ownership','Backlog Ownership & Grooming','User Stories','Hypothesis-Driven Development','Product Discovery','Go-to-Market Strategy','A/B Testing & Experimentation','Feature Prioritization','KPI, OKR & ROI Measurement','Customer Loyalty & Retention'],
+      hot: ['Product Strategy & Roadmapping','Backlog Ownership & Grooming']
+    },
+    ba: {
+      title: 'Business Analysis & Process Optimization',
+      desc: 'The documentation and analysis discipline that makes delivery predictable: requirements you can trace from business need to release.',
+      pills: ['Requirements Gathering & Elicitation','BRD · PRD · FRD · BRS','User Stories & Acceptance Criteria','Process Mapping (BPMN)','Current / Future-State Analysis','Workflow Design','Business Process Re-engineering','Gap & Root Cause Analysis','SOP Development','UAT Planning & Test Strategy','Test Case Design','Defect Triage & Release Validation','Change Management','Workshop Facilitation'],
+      hot: ['BRD · PRD · FRD · BRS','UAT Planning & Test Strategy','Defect Triage & Release Validation']
+    },
+    ai: {
+      title: 'AI Product Management',
+      desc: 'AI products specified like real products: data needs, integration points, evaluation and responsible use, not just demos.',
+      pills: ['AI Product Strategy','Generative AI Product Development','LLM-Powered Product Design','Prompt Engineering','AI Workflow Automation','AI-Assisted Product Discovery','Rapid AI Prototyping','Proof of Concept (PoC)','Responsible AI','AI Evaluation & Validation','Claude / Claude Code','OpenAI (ChatGPT / GPT)','Builder.io','Replit','AI Content & Knowledge Automation'],
+      hot: ['AI Product Strategy','AI Workflow Automation','LLM-Powered Product Design']
+    },
+    payments: {
+      title: 'Banking, Payments & Financial Services',
+      desc: 'Deep financial-institution domain knowledge across North American and Indian banking and insurance.',
+      pills: ['Digital Banking','FinTech','Payment Systems','ACH · EFT · Wire Transfers','Card Payments','Payment Orchestration','Transaction Processing','Reconciliation','Treasury & Cash Management','Loan Origination & Processing','Customer Onboarding','AML · KYC','Regulatory Compliance','Risk & Audit Controls','Learning Management Systems (LMS)'],
+      hot: ['Reconciliation','Payment Orchestration','Digital Banking']
+    },
+    data: {
+      title: 'Data, Analytics & Tools',
+      desc: 'SQL and dashboards for decisions, APIs and integrations for delivery, and the collaboration stack to run it all.',
+      pills: ['SQL','Power BI','Tableau','Advanced Excel','SSRS','Crystal Reports','KPI Dashboards','Product Analytics','REST APIs','API Integrations','Data Validation','Secure Data Migration','Jira','Confluence','Figma','Miro','Lucidchart','Microsoft Visio','Microsoft Project','SaaS & Enterprise Software'],
+      hot: ['SQL','Power BI','REST APIs']
+    }
+  };
+  var panel = document.getElementById('skillPanel');
+  function renderSkills(key){
+    var s = SKILLS[key];
+    var html = '<h3>' + s.title + '</h3><p>' + s.desc + '</p><div class="pill-cloud">';
+    s.pills.forEach(function(p){
+      html += '<span class="' + (s.hot.indexOf(p) > -1 ? 'hot' : '') + '">' + p + '</span>';
+    });
+    html += '</div>';
+    panel.innerHTML = html;
+  }
+  renderSkills('product');
+  document.querySelectorAll('.skill-tabs button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.skill-tabs button').forEach(function(b){
+        b.classList.remove('active'); b.setAttribute('aria-selected','false');
+      });
+      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      renderSkills(btn.getAttribute('data-tab'));
+    });
+  });
+
+  // Copy email
+  var copyBtn = document.getElementById('copyEmailBtn');
+  var copyLabel = document.getElementById('copyEmailLabel');
+  copyBtn.addEventListener('click', function(){
+    var email = 'dhrumilwaghela565@gmail.com';
+    function done(){
+      copyLabel.textContent = 'Copied ✓';
+      setTimeout(function(){ copyLabel.textContent = 'Copy email'; }, 2000);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(done).catch(function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = email; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch(e){}
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>
+<script>
+(function(){
+  // Hero anti-gravity parallax: eased pointer depth (--mx/--my) and a
+  // slower scroll drift (--sy) for the decorative layer. CSS owns all
+  // transforms; this only feeds it numbers. Skipped entirely for
+  // reduced-motion users.
+  var hero = document.querySelector('.hero');
+  if (!hero) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
+  var fine = window.matchMedia('(pointer: fine)');
+
+  var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+  function loop(){
+    cx += (tx - cx) * 0.06;
+    cy += (ty - cy) * 0.06;
+    hero.style.setProperty('--mx', cx.toFixed(3));
+    hero.style.setProperty('--my', cy.toFixed(3));
+    if (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) {
+      raf = requestAnimationFrame(loop);
+    } else { raf = null; }
+  }
+  function kick(){ if (!raf) raf = requestAnimationFrame(loop); }
+  if (fine.matches) {
+    hero.addEventListener('pointermove', function(e){
+      var r = hero.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+      kick();
+    });
+    hero.addEventListener('pointerleave', function(){ tx = 0; ty = 0; kick(); });
+  }
+
+  var ticking = false;
+  function onScroll(){
+    ticking = false;
+    var h = hero.offsetHeight;
+    var y = window.scrollY || window.pageYOffset || 0;
+    if (y < h) hero.style.setProperty('--sy', Math.max(y, 0).toFixed(1));
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, {passive: true});
+  onScroll();
+})();
+</script>
+<script>
+(function(){
+  // Colourful cursor trail plus scanning sweep: small plus signs,
+  // triangles and glowing dots in the six case-study accent colours
+  // follow the pointer, and a soft scan band with a glow rides with
+  // it, echoing a wireframe scan. The card or section under the
+  // pointer gets a subtle outline highlight. The same effects follow
+  // a finger on touch screens, where the sweep reads as a glow
+  // around the fingertip. Safety rules, in order:
+  //  - fully off under prefers-reduced-motion, checked live as well,
+  //    so the page simply shows normally with no trail and no sweep
+  //  - both layers are pointer-events:none, so they can never block
+  //    a click, tap, hover or scroll anywhere on the page, and all
+  //    listeners are passive so touch scrolling is never held up
+  //  - one shared palette read from the card accent variables, so
+  //    the scheme-specific values keep every colour visible in both
+  //    light and dark modes
+  //  - hard particle cap, spawn throttling by distance, transform
+  //    only sweep movement, throttled highlight checks, and loops
+  //    that stop the moment there is nothing left to animate
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
+
+  var canvas = document.getElementById('cursor-trail');
+  var sweep = document.getElementById('pointer-sweep');
+  var ctx = null;
+  if (canvas && canvas.getContext) ctx = canvas.getContext('2d');
+  if (!ctx && !sweep) return;
+
+  // Trail colours come straight from the card accent variables, so
+  // they always match the six cards.
+  var palette = [];
+  function readPalette(){
+    var cs = window.getComputedStyle(document.documentElement);
+    var names = ['--a-violet','--a-green','--a-blue','--a-yellow','--a-pink','--a-teal'];
+    palette = names.map(function(n){ return cs.getPropertyValue(n).trim(); })
+      .filter(function(c){ return c; });
+    if (!palette.length) palette = ['#a78bfa','#4ade80','#60a5fa','#facc15','#f472b6','#2dd4bf'];
+  }
+  readPalette();
+  var scheme = window.matchMedia('(prefers-color-scheme: dark)');
+  if (scheme.addEventListener) scheme.addEventListener('change', readPalette);
+  else if (scheme.addListener) scheme.addListener(readPalette);
+
+  /* ---------------- Trail (canvas particles) ---------------- */
+  var DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0;
+  function sizeCanvas(){
+    if (!ctx) return;
+    W = window.innerWidth; H = window.innerHeight;
+    canvas.width = Math.round(W * DPR);
+    canvas.height = Math.round(H * DPR);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  }
+  sizeCanvas();
+
+  var MAX = 70;
+  var particles = [];
+  var trailRaf = null;
+  var lastTrailTs = 0;
+  var colorIdx = Math.floor(Math.random() * 6);
+
+  function spawn(x, y){
+    if (!ctx) return;
+    if (particles.length >= MAX) particles.shift();
+    colorIdx = (colorIdx + 1) % palette.length;
+    var kind = Math.random();
+    particles.push({
+      x: x + (Math.random() - 0.5) * 10,
+      y: y + (Math.random() - 0.5) * 10,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: -0.25 - Math.random() * 0.55,
+      size: 5 + Math.random() * 6,
+      rot: Math.random() * Math.PI * 2,
+      vr: (Math.random() - 0.5) * 0.06,
+      life: 0,
+      ttl: 520 + Math.random() * 380,
+      color: palette[colorIdx % palette.length],
+      shape: kind < 0.38 ? 'plus' : (kind < 0.68 ? 'triangle' : 'dot')
+    });
+  }
+  function drawPlus(s){
+    ctx.lineWidth = Math.max(1.6, s * 0.3);
+    ctx.beginPath();
+    ctx.moveTo(-s, 0); ctx.lineTo(s, 0);
+    ctx.moveTo(0, -s); ctx.lineTo(0, s);
+    ctx.stroke();
+  }
+  function drawTriangle(s){
+    ctx.beginPath();
+    ctx.moveTo(0, -s);
+    ctx.lineTo(s * 0.9, s * 0.75);
+    ctx.lineTo(-s * 0.9, s * 0.75);
+    ctx.closePath();
+    ctx.fill();
+  }
+  function drawDot(s){
+    // Soft halo first, then the bright core: a glow without shadowBlur.
+    ctx.globalAlpha *= 0.22;
+    ctx.beginPath(); ctx.arc(0, 0, s * 2.1, 0, 6.2832); ctx.fill();
+    ctx.globalAlpha /= 0.22;
+    ctx.beginPath(); ctx.arc(0, 0, s * 0.62, 0, 6.2832); ctx.fill();
+  }
+  function trailFrame(ts){
+    var dt = Math.min(ts - lastTrailTs || 16, 50);
+    lastTrailTs = ts;
+    ctx.clearRect(0, 0, W, H);
+    particles = particles.filter(function(p){ return p.life < p.ttl; });
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      p.life += dt;
+      p.x += p.vx * dt * 0.06;
+      p.y += p.vy * dt * 0.06;
+      p.rot += p.vr * dt * 0.06;
+      var t = p.life / p.ttl;
+      var alpha = t < 0.15 ? t / 0.15 : 1 - (t - 0.15) / 0.85;
+      var s = p.size * (1 - t * 0.35);
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.globalAlpha = Math.max(alpha, 0) * 0.95;
+      ctx.strokeStyle = p.color;
+      ctx.fillStyle = p.color;
+      if (p.shape === 'plus') drawPlus(s);
+      else if (p.shape === 'triangle') drawTriangle(s);
+      else drawDot(s);
+      ctx.restore();
+    }
+    if (particles.length) { trailRaf = requestAnimationFrame(trailFrame); }
+    else { trailRaf = null; ctx.clearRect(0, 0, W, H); }
+  }
+  function kickTrail(){
+    if (ctx && !trailRaf && !document.hidden) { lastTrailTs = 0; trailRaf = requestAnimationFrame(trailFrame); }
+  }
+
+  /* ---------------- Scanning sweep ---------------- */
+  var sweepOn = false;
+  var sweepRaf = null;
+  var tx2 = 0, ty2 = 0, cx2 = 0, cy2 = 0, sweepSnapped = false;
+  var hideTimer = null;
+  var highlightEl = null;
+  var lastHighlightCheck = 0;
+
+  var indicator = document.getElementById('scan-indicator');
+  var indicatorName = indicator ? indicator.querySelector('.scan-name') : null;
+
+  // Name shown in the scanning indicator: the heading of the section
+  // the component belongs to, with a few component level names first.
+  function scanNameFor(el){
+    if (!el) return '';
+    if (el.classList && el.classList.contains('contact')) return 'Contact';
+    if (el.classList && el.classList.contains('email-card')) return 'Contact';
+    if (el.classList && el.classList.contains('hero-card')) return 'At a Glance';
+    var sec = el.closest ? el.closest('section') : null;
+    if (sec) {
+      var h2 = sec.querySelector('h2');
+      if (h2 && h2.textContent) return h2.textContent.trim();
+    }
+    if (el.closest && el.closest('.contact')) return 'Contact';
+    if (el.closest && el.closest('.hero')) return 'Introduction';
+    return '';
+  }
+  function showIndicatorFor(el){
+    if (!indicator || !indicatorName) return;
+    var name = scanNameFor(el);
+    if (!name) { indicator.classList.remove('on'); return; }
+    indicatorName.textContent = name;
+    indicator.classList.add('on');
+  }
+  function hideIndicator(){
+    if (indicator) indicator.classList.remove('on');
+  }
+
+  // Note: this script no longer builds components. Building is
+  // scroll-driven and lives in the creation script below, which is
+  // the single build path; the sweep here only highlights and
+  // names what the pointer is over.
+
+  function setHighlight(el){
+    if (el === highlightEl) return;
+    if (highlightEl) highlightEl.classList.remove('scan-highlight');
+    highlightEl = el;
+    if (highlightEl) highlightEl.classList.add('scan-highlight');
+    showIndicatorFor(highlightEl);
+  }
+  function clearHighlight(){ setHighlight(null); hideIndicator(); }
+
+  function updateHighlight(x, y){
+    if (!document.elementFromPoint) return;
+    var el = document.elementFromPoint(x, y);
+    if (!el || !el.closest) { clearHighlight(); return; }
+    var target = el.closest('.card, .step, .cred-box, .hero-card, .skill-panel, .email-card, .contact, .stat');
+    if (!target) target = el.closest('section');
+    if (!target) target = el.closest('.hero');
+    setHighlight(target);
+  }
+
+  function sweepFrame(ts){
+    cx2 += (tx2 - cx2) * 0.24;
+    cy2 += (ty2 - cy2) * 0.24;
+    if (Math.abs(tx2 - cx2) < 0.1) cx2 = tx2;
+    if (Math.abs(ty2 - cy2) < 0.1) cy2 = ty2;
+    if (sweep) {
+      sweep.style.transform = 'translate3d(' + cx2.toFixed(1) + 'px,' + cy2.toFixed(1) + 'px,0) translate(-50%,-50%)';
+    }
+    if (indicator && sweepOn) {
+      // Ride just below and beside the pointer, flipping to the
+      // other side near the viewport edge so it never runs off
+      // screen. Transform only, like the sweep itself.
+      var iw = indicator.offsetWidth || 150;
+      var ix = cx2 + 18;
+      if (ix + iw > window.innerWidth - 8) ix = cx2 - iw - 18;
+      var iy = cy2 + 20;
+      if (iy > window.innerHeight - 44) iy = cy2 - 44;
+      indicator.style.transform = 'translate3d(' + Math.max(ix, 8).toFixed(1) + 'px,' + Math.max(iy, 8).toFixed(1) + 'px,0)';
+    }
+    // Highlight checks are throttled: at most one hit test per 90ms,
+    // and movement itself is transform only, so there is no layout
+    // thrash while the pointer or finger is moving.
+    if (ts - lastHighlightCheck > 90) {
+      lastHighlightCheck = ts;
+      updateHighlight(cx2, cy2);
+    }
+    if (sweepOn) { sweepRaf = requestAnimationFrame(sweepFrame); }
+    else { sweepRaf = null; }
+  }
+  function kickSweep(){
+    if (!sweepRaf) sweepRaf = requestAnimationFrame(sweepFrame);
+  }
+  function showSweep(x, y, isTouch){
+    if (!sweep) return;
+    if (!sweepSnapped) { cx2 = x; cy2 = y; sweepSnapped = true; }
+    tx2 = x; ty2 = y;
+    sweep.classList.toggle('is-touch', !!isTouch);
+    if (!sweepOn) { sweepOn = true; sweep.classList.add('on'); }
+    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    // Idle fade: if the pointer or finger stops, the sweep and its
+    // highlight quietly go away instead of sitting on the page.
+    hideTimer = setTimeout(function(){
+      hideTimer = null;
+      sweepOn = false;
+      sweep.classList.remove('on');
+      clearHighlight();
+    }, 1800);
+    if (highlightEl) showIndicatorFor(highlightEl);
+    kickSweep();
+  }
+  function hideSweep(delay){
+    if (hideTimer) clearTimeout(hideTimer);
+    hideTimer = setTimeout(function(){
+      hideTimer = null;
+      sweepOn = false;
+      if (sweep) sweep.classList.remove('on');
+      clearHighlight();
+    }, delay || 0);
+  }
+
+  /* ---------------- Shared pointer handling ---------------- */
+  var lastX = null, lastY = null;
+  function onPoint(x, y, pointerType, spawnBurst){
+    if (reduce.matches || document.hidden) return;
+    var isTouch = pointerType === 'touch';
+    showSweep(x, y, isTouch);
+    if (spawnBurst) { spawn(x, y); kickTrail(); lastX = x; lastY = y; return; }
+    if (lastX === null) { lastX = x; lastY = y; spawn(x, y); kickTrail(); return; }
+    var dx = x - lastX, dy = y - lastY;
+    var dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < 9) return;
+    // One particle per step of travel, capped, so fast flicks and
+    // fast scrolls stay light.
+    var steps = Math.min(3, Math.floor(dist / 13));
+    for (var i = 1; i <= steps; i++) spawn(lastX + dx * i / (steps + 1), lastY + dy * i / (steps + 1));
+    lastX = x; lastY = y;
+    kickTrail();
+  }
+
+  if (window.PointerEvent) {
+    window.addEventListener('pointermove', function(e){
+      onPoint(e.clientX, e.clientY, e.pointerType || 'mouse', false);
+    }, {passive: true});
+    window.addEventListener('pointerdown', function(e){
+      onPoint(e.clientX, e.clientY, e.pointerType || 'mouse', true);
+    }, {passive: true});
+    window.addEventListener('pointerup', function(e){
+      if (e.pointerType === 'touch') hideSweep(450);
+    }, {passive: true});
+    window.addEventListener('pointercancel', function(){
+      hideSweep(0); lastX = null; lastY = null;
+    }, {passive: true});
+  } else {
+    // Fallback for browsers without pointer events: mouse and touch
+    // moves feed the same handler, all passive so scrolling is free.
+    window.addEventListener('mousemove', function(e){
+      onPoint(e.clientX, e.clientY, 'mouse', false);
+    }, {passive: true});
+    window.addEventListener('touchstart', function(e){
+      if (e.touches && e.touches[0]) onPoint(e.touches[0].clientX, e.touches[0].clientY, 'touch', true);
+    }, {passive: true});
+    window.addEventListener('touchmove', function(e){
+      if (e.touches && e.touches[0]) onPoint(e.touches[0].clientX, e.touches[0].clientY, 'touch', false);
+    }, {passive: true});
+    window.addEventListener('touchend', function(){ hideSweep(450); }, {passive: true});
+  }
+
+  document.addEventListener('mouseleave', function(){
+    lastX = null; lastY = null; hideSweep(0);
+  });
+  window.addEventListener('blur', function(){ hideSweep(0); });
+
+  var resizeTimer = null;
+  window.addEventListener('resize', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(sizeCanvas, 120);
+  }, {passive: true});
+
+  // If the user turns reduced motion on mid-session, stop and clear
+  // everything: particles, sweep and highlight all go away.
+  function onReduceChange(){
+    if (!reduce.matches) return;
+    particles = [];
+    if (trailRaf) { cancelAnimationFrame(trailRaf); trailRaf = null; }
+    if (ctx) ctx.clearRect(0, 0, W, H);
+    sweepOn = false;
+    if (sweep) sweep.classList.remove('on');
+    clearHighlight();
+    hideIndicator();
+    document.querySelectorAll('.build-fx').forEach(function(fx){
+      if (fx.parentNode) fx.parentNode.removeChild(fx);
+    });
+    document.querySelectorAll('.is-building').forEach(function(el){
+      el.classList.remove('is-building');
+    });
+    document.querySelectorAll('.build-word').forEach(function(w){
+      if (w.parentNode) w.parentNode.replaceChild(document.createTextNode(w.textContent), w);
+    });
+    document.querySelectorAll('.build-piece').forEach(function(p){
+      p.classList.remove('build-piece');
+      p.style.removeProperty('--wd');
+    });
+  }
+  if (reduce.addEventListener) reduce.addEventListener('change', onReduceChange);
+  else if (reduce.addListener) reduce.addListener(onReduceChange);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) kickTrail(); });
+})();
+</script>
+<script>
+(function(){
+  // Scroll-driven creation with a swarm of cursors. This is the
+  // single build path for the page: as the recruiter scrolls (mouse
+  // wheel, keyboard, or a finger on a phone, it makes no difference
+  // because IntersectionObserver does the watching), each component
+  // builds as it comes into view. A pool of eight small arrow
+  // cursors in varied colours flies in, scatters to points along
+  // the component's edges while its wireframe build flourish plays
+  // (border draws in, grid flashes, content settles), works along
+  // the edges while the inner content assembles, gathers at the
+  // component's top centre, then disperses and fades.
+  //
+  // Each build takes about two seconds, slow enough for the eye to
+  // follow step by step, and only one component builds at a time:
+  // triggers queue in scroll order (document order) so builds
+  // never compete for attention. The inner content builds with the
+  // frame, not inside a static frame: headings and paragraphs are
+  // split into word spans that sharpen into place in reading
+  // order, and chips, tags, metrics, rows and buttons pop in as
+  // single pieces, all staggered across the same two seconds. When
+  // the build finishes the word spans are unwrapped and every
+  // build class is removed, so the component is left exactly as
+  // authored and fully visible, with nothing staying hidden.
+  //
+  // Safety rules:
+  //  - fully off under prefers-reduced-motion, checked at start and
+  //    again live if the setting changes mid-session
+  //  - the swarm layer is pointer-events:none and every cursor is
+  //    a reused DOM node moved with transform and opacity only, so
+  //    clicks, taps and scrolling are never blocked or held up
+  //  - each component builds at most once per page session, one
+  //    build runs at a time, and every triggered component queues
+  //    in document order and builds the same slow way, no matter
+  //    how fast the viewer scrolls or how many trigger together
+  //  - if anything in this script cannot run, it returns early and
+  //    the page simply shows normally, fully built
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) {
+    document.documentElement.classList.remove('build-blank');
+    return;
+  }
+  var layer = document.getElementById('swarm-layer');
+  if (!layer || !('IntersectionObserver' in window)) {
+    document.documentElement.classList.remove('build-blank');
+    return;
+  }
+  // The creation script is running, so the head gate's short
+  // failsafe is no longer needed; this script owns revealing.
+  if (window.__buildBlankFailsafe) {
+    clearTimeout(window.__buildBlankFailsafe);
+    window.__buildBlankFailsafe = null;
+  }
+  // Reveal everything at once: used only when reduced motion is
+  // switched on mid-session (see teardown below), so the page then
+  // shows exactly as authored with no builds running.
+  function revealAll(){
+    document.documentElement.classList.remove('build-blank');
+    document.querySelectorAll('.build-pending').forEach(function(el){
+      el.classList.remove('build-pending');
+    });
+  }
+
+  /* ---------------- Palette ---------------- */
+  // Ten hues: the six card accents plus orange, coral, lime and
+  // cyan, all read from the theme variables so the scheme-specific
+  // values keep every colour visible in both light and dark modes.
+  var PALETTE = [];
+  var ACCENT = '#6d5df0';
+  function readPalette(){
+    var cs = window.getComputedStyle(document.documentElement);
+    function v(n, fb){ var x = cs.getPropertyValue(n).trim(); return x || fb; }
+    PALETTE = [
+      v('--a-violet', '#a78bfa'), v('--a-green', '#4ade80'),
+      v('--a-blue', '#60a5fa'), v('--a-yellow', '#facc15'),
+      v('--a-pink', '#f472b6'), v('--a-teal', '#2dd4bf'),
+      v('--a-orange', '#fb923c'), v('--a-coral', '#f87171'),
+      v('--a-lime', '#a3e635'), v('--a-cyan', '#22d3ee')
+    ];
+    ACCENT = v('--accent', ACCENT);
+  }
+  readPalette();
+  var schemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+  if (schemeMq.addEventListener) schemeMq.addEventListener('change', readPalette);
+  else if (schemeMq.addListener) schemeMq.addListener(readPalette);
+
+  // The accent of the component being built, resolved through the
+  // card's --ca variable so a few swarm cursors match the card.
+  function accentFor(el){
+    try {
+      var raw = window.getComputedStyle(el).getPropertyValue('--ca').trim();
+      var m = raw.match(/var\(\s*(--[a-zA-Z0-9-]+)\s*\)/);
+      if (m) {
+        var v = window.getComputedStyle(document.documentElement).getPropertyValue(m[1]).trim();
+        if (v) return v;
+      }
+      if (/^#/.test(raw) || /^rgb/.test(raw)) return raw;
+    } catch (e) {}
+    return ACCENT;
+  }
+
+  /* ---------------- Swarm pool ---------------- */
+  // Eight arrow glyphs, created once and reused for every build.
+  var N = 8;
+  var hasWAAPI = typeof layer.animate === 'function';
+  var ARROW = '<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 2 L3 15.5 L7.2 12.4 L9.6 17.6 L11.8 16.6 L9.4 11.4 L14.5 11.4 Z"/></svg>';
+  var cursors = [];
+  for (var i = 0; i < N; i++) {
+    var node = document.createElement('span');
+    node.className = 'swarm-cursor';
+    node.innerHTML = ARROW;
+    node.style.color = PALETTE[i % PALETTE.length];
+    var sx = window.innerWidth / 2 + (Math.random() - 0.5) * 160;
+    var sy = window.innerHeight / 2 + (Math.random() - 0.5) * 100;
+    node.style.transform = 'translate3d(' + sx.toFixed(1) + 'px,' + sy.toFixed(1) + 'px,0)';
+    layer.appendChild(node);
+    cursors.push({ el: node, x: sx, y: sy, anim: null });
+  }
+
+  /* ---------------- Build timing ---------------- */
+  var BUILD_MS = 2000;
+
+  /* ---------------- Inner content assembly ---------------- */
+  // Whole units that pop in as one piece instead of word by word:
+  // metric and stat blocks, date pills, expand and action buttons,
+  // chips and tags inside their clouds, and list rows (fact rows,
+  // credential rows and the bullet lines inside a step).
+  function isPieceElement(node){
+    if (!node || node.nodeType !== 1 || !node.classList) return false;
+    if (node.classList.contains('metric') || node.classList.contains('stat') ||
+        node.classList.contains('when') || node.classList.contains('expand-btn') ||
+        node.classList.contains('btn')) return true;
+    var parent = node.parentElement;
+    if (node.tagName === 'SPAN' && parent &&
+        (parent.classList.contains('tags') || parent.classList.contains('chips') ||
+         parent.classList.contains('pill-cloud') || parent.classList.contains('role-tags'))) return true;
+    if (node.tagName === 'LI' && node.closest &&
+        (node.closest('.fact-list') || node.closest('.cred-list') || node.closest('.step'))) return true;
+    return false;
+  }
+  function skipSubtree(node){
+    // Hidden case details, icons and the build overlay itself are
+    // never split: their text is not on screen to be assembled.
+    if (!node || node.nodeType !== 1) return false;
+    if (node.classList && (node.classList.contains('details') || node.classList.contains('build-fx'))) return true;
+    if (node.tagName === 'SVG' || node.tagName === 'SCRIPT' || node.tagName === 'STYLE') return true;
+    return false;
+  }
+  // First pass: count the units (words plus pieces) in reading
+  // order so the stagger can be spread across the full build,
+  // however long or short the component is.
+  function countUnits(node){
+    var total = 0;
+    var kids = Array.prototype.slice.call(node.childNodes || []);
+    for (var i = 0; i < kids.length; i++) {
+      var kid = kids[i];
+      if (kid.nodeType === 3) {
+        var words = kid.textContent.split(/\s+/).filter(function(w){ return w; });
+        total += words.length;
+      } else if (kid.nodeType === 1) {
+        if (skipSubtree(kid)) continue;
+        if (isPieceElement(kid)) { total += 1; continue; }
+        total += countUnits(kid);
+      }
+    }
+    return total;
+  }
+  // Second pass: wrap each word in a .build-word span and tag each
+  // piece .build-piece, assigning --wd delays in reading order.
+  function wrapUnits(node, state){
+    var kids = Array.prototype.slice.call(node.childNodes || []);
+    for (var i = 0; i < kids.length; i++) {
+      var kid = kids[i];
+      if (kid.nodeType === 3) {
+        var parts = kid.textContent.split(/(\s+)/);
+        if (!parts.some(function(p){ return p.trim(); })) continue;
+        var frag = document.createDocumentFragment();
+        parts.forEach(function(part){
+          if (!part) return;
+          if (!part.trim()) { frag.appendChild(document.createTextNode(part)); return; }
+          var span = document.createElement('span');
+          span.className = 'build-word';
+          span.textContent = part;
+          span.style.setProperty('--wd', Math.round(state.next()) + 'ms');
+          frag.appendChild(span);
+        });
+        kid.parentNode.replaceChild(frag, kid);
+      } else if (kid.nodeType === 1) {
+        if (skipSubtree(kid)) continue;
+        if (isPieceElement(kid)) {
+          kid.classList.add('build-piece');
+          kid.style.setProperty('--wd', Math.round(state.next()) + 'ms');
+          continue;
+        }
+        wrapUnits(kid, state);
+      }
+    }
+  }
+  function prepareContent(el){
+    try {
+      var total = countUnits(el);
+      if (!total) return;
+      // Spread the starts across the build, leaving room at the
+      // end for the last word or piece to finish forming.
+      var step = Math.max(6, Math.min(160, (BUILD_MS - 550) / Math.max(total - 1, 1)));
+      var idx = 0;
+      wrapUnits(el, { next: function(){ return idx++ * step; } });
+    } catch (e) { cleanupContent(el); }
+  }
+  // Restore the component to exactly its authored DOM: word spans
+  // become plain text again and piece classes and delays go away,
+  // so nothing stays hidden, wrapped or altered after a build.
+  function cleanupContent(el){
+    if (!el || !el.querySelectorAll) return;
+    el.querySelectorAll('.build-word').forEach(function(w){
+      if (w.parentNode) w.parentNode.replaceChild(document.createTextNode(w.textContent), w);
+    });
+    el.querySelectorAll('.build-piece').forEach(function(p){
+      p.classList.remove('build-piece');
+      p.style.removeProperty('--wd');
+    });
+    if (el.normalize) el.normalize();
+  }
+
+  /* ---------------- Surface build flourish ---------------- */
+  // The wireframe overlay the stylesheet defines, stretched to the
+  // same two seconds: border draws in, grid flashes, component
+  // settles, overlay removes itself. It runs together with the
+  // inner content assembly prepared above, and both clean up at
+  // the end of the build.
+  function buildSurface(el){
+    var fx = document.createElement('span');
+    fx.className = 'build-fx';
+    fx.setAttribute('aria-hidden', 'true');
+    var needsHost = window.getComputedStyle(el).position === 'static';
+    if (needsHost) el.classList.add('build-host');
+    // Split the content first, while the component is still hidden
+    // by the blank state: every word and piece starts at opacity 0
+    // through its build class, so revealing the frame now does not
+    // flash finished text. The content then assembles visibly.
+    prepareContent(el);
+    el.classList.add('build-done');
+    el.appendChild(fx);
+    el.classList.add('is-building');
+    setTimeout(function(){
+      if (fx.parentNode) fx.parentNode.removeChild(fx);
+      el.classList.remove('is-building');
+      cleanupContent(el);
+      if (needsHost) el.classList.remove('build-host');
+    }, BUILD_MS + 80);
+  }
+
+  /* ---------------- Swarm choreography ---------------- */
+  var SEQ_MS = BUILD_MS;
+  var active = 0;
+  var queue = [];
+  var seqSeed = 0;
+  var docOrder = new WeakMap();
+
+  function clampPt(p){
+    p.x = Math.max(6, Math.min(window.innerWidth - 24, p.x));
+    p.y = Math.max(6, Math.min(window.innerHeight - 24, p.y));
+    return p;
+  }
+  // Point at fraction t along the rectangle's perimeter.
+  function perimeterPoint(r, t){
+    var w = r.width, h = r.height, d = t * 2 * (w + h), x, y;
+    if (d < w) { x = r.left + d; y = r.top; }
+    else if (d < w + h) { x = r.right; y = r.top + (d - w); }
+    else if (d < 2 * w + h) { x = r.right - (d - w - h); y = r.bottom; }
+    else { x = r.left; y = r.bottom - (d - 2 * w - h); }
+    return { x: x, y: y };
+  }
+
+  function runSequence(el){
+    var r = el.getBoundingClientRect();
+    active++;
+    buildSurface(el);
+    if (hasWAAPI) {
+      seqSeed++;
+      var accent = accentFor(el);
+      var cxT = r.left + r.width / 2;
+      var cyT = r.top + Math.min(26, Math.max(10, r.height * 0.12));
+      cursors.forEach(function(cur, idx){
+        if (cur.anim) { try { cur.anim.cancel(); } catch (e) {} cur.anim = null; }
+        cur.el.style.color = (idx === 0 || idx === 3) ? accent : PALETTE[(idx + seqSeed) % PALETTE.length];
+        var p = perimeterPoint(r, (idx + 0.5) / N);
+        p.x += (Math.random() - 0.5) * 18;
+        p.y += (Math.random() - 0.5) * 18;
+        clampPt(p);
+        // Second working point further along the perimeter: while
+        // the text assembles, each cursor keeps moving along the
+        // edges instead of parking, so the swarm reads as working
+        // the whole component for the full two seconds.
+        var p2 = perimeterPoint(r, ((idx + 2.5) % N + 0.5) / N);
+        p2.x += (Math.random() - 0.5) * 18;
+        p2.y += (Math.random() - 0.5) * 18;
+        clampPt(p2);
+        var conv = clampPt({
+          x: cxT + (Math.random() - 0.5) * 24,
+          y: cyT + (Math.random() - 0.5) * 14
+        });
+        var ang = Math.atan2(p2.y - cyT, p2.x - cxT);
+        var out = {
+          x: conv.x + Math.cos(ang) * 160,
+          y: conv.y + Math.sin(ang) * 160 - 26
+        };
+        var sx = cur.x, sy = cur.y;
+        function tf(pt){ return 'translate3d(' + pt.x.toFixed(1) + 'px,' + pt.y.toFixed(1) + 'px,0)'; }
+        cur.anim = cur.el.animate([
+          { transform: tf({ x: sx, y: sy }), opacity: 0 },
+          { transform: tf({ x: sx, y: sy }), opacity: 1, offset: 0.05 },
+          { transform: tf(p), opacity: 1, offset: 0.26 },
+          { transform: tf(p2), opacity: 1, offset: 0.62 },
+          { transform: tf(conv), opacity: 1, offset: 0.85 },
+          { transform: tf(out), opacity: 0, offset: 1 }
+        ], { duration: SEQ_MS, easing: 'cubic-bezier(.3,.65,.3,1)', fill: 'forwards' });
+        cur.x = out.x; cur.y = out.y;
+      });
+    }
+    setTimeout(function(){
+      active = Math.max(0, active - 1);
+      pump();
+    }, SEQ_MS + 60);
+    return true;
+  }
+  // One build at a time, in scroll order: the queue is kept sorted
+  // by document position, so a later component can never start
+  // while an earlier one is still assembling, and builds never
+  // compete for the eye.
+  function pump(){
+    while (active < 1 && queue.length) {
+      runSequence(queue.shift());
+    }
+  }
+  function schedule(el){
+    if (queue.indexOf(el) > -1) return;
+    if (el.classList.contains('build-done')) return;
+    // No queue limit: every triggered component waits its turn and
+    // builds the same slow way, however long the queue gets.
+    queue.push(el);
+    queue.sort(function(a, b){
+      return (docOrder.get(a) || 0) - (docOrder.get(b) || 0);
+    });
+    pump();
+  }
+
+  /* ---------------- Triggers ---------------- */
+  var BUILDABLES = '.topnav, .hero-name, .hero-role, .hero-intro, .hero-card, .stats, .card, .step, .skill-panel, .cred-box, .t-item, .sec-head, .companies, .skill-tabs, .contact, footer';
+  var buildables = Array.prototype.slice.call(document.querySelectorAll(BUILDABLES));
+  var seen = new WeakSet();
+  buildables.forEach(function(el, idx){ docOrder.set(el, idx); });
+
+  // Components already on screen at load: every one of them is
+  // queued promptly, shortly after load, and the one at a time
+  // queue builds them in document order, about two seconds each,
+  // so a visitor who never scrolls still sees the whole hero and
+  // the top sections built in front of them, starting from blank.
+  // Everything below the fold stays hidden and waits for its
+  // scroll turn.
+  var loadPicks = buildables.filter(function(el){
+    var r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0 && r.left < window.innerWidth && r.right > 0;
+  });
+  loadPicks.forEach(function(el){
+    seen.add(el);
+  });
+  setTimeout(function(){
+    loadPicks.forEach(function(el){ schedule(el); });
+  }, 250);
+
+  // Observation starts once the load picks are queued. The band is
+  // small, so a component starts building as it actually enters
+  // the view, where the eye can follow its two second assembly,
+  // and the queue then runs builds strictly one at a time in
+  // scroll order. Each component builds once per session and is
+  // then unobserved.
+  var io = new IntersectionObserver(function(entries){
+    // Every intersecting component is scheduled, however many fire
+    // in one batch and however fast the viewer is scrolling: the
+    // queue builds them all the same slow way, one at a time in
+    // document order.
+    var hits = entries.filter(function(en){ return en.isIntersecting; });
+    hits.forEach(function(en){
+      var el = en.target;
+      io.unobserve(el);
+      if (seen.has(el)) return;
+      seen.add(el);
+      schedule(el);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  setTimeout(function(){
+    buildables.forEach(function(el){ io.observe(el); });
+  }, 500);
+
+  /* ---------------- Reduced motion, switched on live ---------------- */
+  function teardown(){
+    try { io.disconnect(); } catch (e) {}
+    revealAll();
+    queue = [];
+    cursors.forEach(function(cur){
+      if (cur.anim) { try { cur.anim.cancel(); } catch (e) {} cur.anim = null; }
+      cur.el.style.opacity = '0';
+    });
+    document.querySelectorAll('.build-fx').forEach(function(fx){
+      if (fx.parentNode) fx.parentNode.removeChild(fx);
+    });
+    document.querySelectorAll('.is-building').forEach(function(el){
+      el.classList.remove('is-building');
+      cleanupContent(el);
+    });
+    document.querySelectorAll('.build-word, .build-piece').forEach(function(node){
+      var host = node.closest ? node.closest('.card, .step, .cred-box, .hero-card, .skill-panel, .contact, .stats, .t-item, .sec-head') : null;
+      if (!host) {
+        if (node.classList.contains('build-word') && node.parentNode) {
+          node.parentNode.replaceChild(document.createTextNode(node.textContent), node);
+        } else {
+          node.classList.remove('build-piece');
+          node.style.removeProperty('--wd');
+        }
+      }
+    });
+    layer.style.display = 'none';
+  }
+  function onReduceChange(){ if (reduce.matches) teardown(); }
+  if (reduce.addEventListener) reduce.addEventListener('change', onReduceChange);
+  else if (reduce.addListener) reduce.addListener(onReduceChange);
+})();
+</script>
+</body>
+</html>
